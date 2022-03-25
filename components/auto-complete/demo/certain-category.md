@@ -63,7 +63,7 @@ const options = [
   },
 ];
 
-const Complete: React.FC = () => (
+const App = () => (
   <AutoComplete
     dropdownClassName="certain-category-search-dropdown"
     dropdownMatchSelectWidth={500}
@@ -74,7 +74,7 @@ const Complete: React.FC = () => (
   </AutoComplete>
 );
 
-ReactDOM.render(<Complete />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
 
 ```css
