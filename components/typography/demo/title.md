@@ -13,7 +13,7 @@ title:
 
 Display title in different level.
 
-```jsx
+```tsx
 import { Typography } from 'antd';
 
 const { Title } = Typography;

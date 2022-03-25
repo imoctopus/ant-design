@@ -18,7 +18,7 @@ import { Typography, Switch } from 'antd';
 
 const { Paragraph, Text } = Typography;
 
-const Demo = () => {
+const App = () => {
   const [ellipsis, setEllipsis] = React.useState(true);
 
   return (
@@ -58,5 +58,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

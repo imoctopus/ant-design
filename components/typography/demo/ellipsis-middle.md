@@ -13,12 +13,15 @@ title:
 
 You can ellipsis content from middle by customize `ellipsis={{ suffix: ... }}`.
 
-```jsx
+```tsx
 import { Typography } from 'antd';
 
 const { Text } = Typography;
 
-const EllipsisMiddle = ({ suffixCount, children }) => {
+const EllipsisMiddle: React.FC<{ suffixCount: number; children: string }> = ({
+  suffixCount,
+  children,
+}) => {
   const start = children.slice(0, children.length - suffixCount).trim();
   const suffix = children.slice(-suffixCount).trim();
   return (
