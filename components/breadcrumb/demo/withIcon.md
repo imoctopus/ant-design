@@ -13,7 +13,7 @@ title:
 
 The icon should be placed in front of the text.
 
-```jsx
+```tsx
 import { Breadcrumb } from 'antd';
 import { HomeOutlined, UserOutlined } from '@ant-design/icons';
 

@@ -15,7 +15,7 @@ title:
 
 Used together with `react-router@6+`.
 
-```jsx
+```tsx
 import { HashRouter, Route, Routes, Link, useLocation } from 'react-router-dom';
 import { Breadcrumb, Alert } from 'antd';
 
@@ -37,9 +37,11 @@ const breadcrumbNameMap = {
   '/apps/1/detail': 'Detail',
   '/apps/2/detail': 'Detail',
 };
+
 const Home = props => {
   const location = useLocation();
   const pathSnippets = location.pathname.split('/').filter(i => i);
+
   const extraBreadcrumbItems = pathSnippets.map((_, index) => {
     const url = `/${pathSnippets.slice(0, index + 1).join('/')}`;
     return (
@@ -48,11 +50,13 @@ const Home = props => {
       </Breadcrumb.Item>
     );
   });
+
   const breadcrumbItems = [
     <Breadcrumb.Item key="home">
       <Link to="/">Home</Link>
     </Breadcrumb.Item>,
   ].concat(extraBreadcrumbItems);
+
   return (
     <div className="demo">
       <div className="demo-nav">
