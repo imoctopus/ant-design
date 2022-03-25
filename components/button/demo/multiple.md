@@ -15,9 +15,9 @@ If you need several buttons, we recommend that you use 1 primary button + n seco
 
 ```tsx
 import { Button, Menu, Dropdown } from 'antd';
-import type { MenuInfo } from 'rc-menu/lib/interface';
+import type { MenuProps } from 'antd';
 
-const handleMenuClick = (e: MenuInfo) => {
+const handleMenuClick: MenuProps['onClick'] = e => {
   console.log('click', e);
 };
 
