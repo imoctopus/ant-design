@@ -14,7 +14,7 @@ debug: true
 
 Use `style` to change default style.
 
-```jsx
+```tsx
 import { Divider } from 'antd';
 
 ReactDOM.render(
