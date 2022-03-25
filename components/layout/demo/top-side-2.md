@@ -13,7 +13,7 @@ title:
 
 Both the top navigation and the sidebar, commonly used in application site.
 
-```jsx
+```tsx
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
