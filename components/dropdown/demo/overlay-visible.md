@@ -16,11 +16,12 @@ The default is to close the menu when you click on menu items, this feature can 
 ```tsx
 import { Menu, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
 
 const App = () => {
   const [visible, setVisible] = React.useState(false);
 
-  const handleMenuClick = (e: MenuInfo) => {
+  const handleMenuClick: MenuProps['onClick'] = e => {
     if (e.key === '3') {
       setVisible(false);
     }

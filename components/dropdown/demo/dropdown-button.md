@@ -16,14 +16,14 @@ A button is on the left, and a related functional menu is on the right. You can 
 ```tsx
 import { Menu, Dropdown, Button, message, Space, Tooltip } from 'antd';
 import { DownOutlined, UserOutlined } from '@ant-design/icons';
-import { MenuInfo } from 'rc-menu/lib/interface';
+import type { MenuProps } from 'antd';
 
 const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
   message.info('Click on left button.');
   console.log('click left button', e);
 };
 
-const handleMenuClick = (e: MenuInfo) => {
+const handleMenuClick: MenuProps['onClick'] = e => {
   message.info('Click on menu item.');
   console.log('click', e);
 };
