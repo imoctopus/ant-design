@@ -13,21 +13,22 @@ title:
 
 The Sub-menu will inherit the theme of `Menu`, but you can override this at the `SubMenu` level via the `theme` prop.
 
-```jsx
+```tsx
 import { Menu, Switch } from 'antd';
 import { MailOutlined } from '@ant-design/icons';
+import type { MenuTheme, MenuProps } from 'antd';
 
 const { SubMenu } = Menu;
 
-const SubMenuTheme = () => {
-  const [theme, setTheme] = React.useState('light');
+const App = () => {
+  const [theme, setTheme] = React.useState<MenuTheme>('light');
   const [current, setCurrent] = React.useState('1');
 
-  const changeTheme = value => {
+  const changeTheme = (value: boolean) => {
     setTheme(value ? 'dark' : 'light');
   };
 
-  const handleClick = e => {
+  const handleClick: MenuProps['onClick'] = e => {
     setCurrent(e.key);
   };
 
@@ -61,5 +62,5 @@ const SubMenuTheme = () => {
   );
 };
 
-ReactDOM.render(<SubMenuTheme />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

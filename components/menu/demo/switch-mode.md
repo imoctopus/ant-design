@@ -13,7 +13,7 @@ title:
 
 Show the dynamic switching mode (between `inline` and `vertical`).
 
-```jsx
+```tsx
 import { Menu, Switch, Divider } from 'antd';
 import {
   MailOutlined,
@@ -22,18 +22,19 @@ import {
   SettingOutlined,
   LinkOutlined,
 } from '@ant-design/icons';
+import type { MenuMode, MenuTheme } from 'antd/lib/menu';
 
 const { SubMenu } = Menu;
 
-const Demo = () => {
-  const [mode, setMode] = React.useState('inline');
-  const [theme, setTheme] = React.useState('light');
+const App = () => {
+  const [mode, setMode] = React.useState<MenuMode>('inline');
+  const [theme, setTheme] = React.useState<MenuTheme>('light');
 
-  const changeMode = value => {
+  const changeMode = (value: boolean) => {
     setMode(value ? 'vertical' : 'inline');
   };
 
-  const changeTheme = value => {
+  const changeTheme = (value: boolean) => {
     setTheme(value ? 'dark' : 'light');
   };
 
@@ -81,5 +82,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
