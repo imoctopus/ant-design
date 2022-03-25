@@ -14,10 +14,11 @@ title:
 
 Select multiple options
 
-```jsx
+```tsx
 import { Cascader } from 'antd';
+import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const options = [
+const options: CascaderOptionType[] = [
   {
     label: 'Light',
     value: 'light',
@@ -51,20 +52,18 @@ const options = [
   },
 ];
 
-const App = () => {
-  const onChange = value => {
-    console.log(value);
-  };
-  return (
-    <Cascader
-      style={{ width: '100%' }}
-      options={options}
-      onChange={onChange}
-      multiple
-      maxTagCount="responsive"
-    />
-  );
+const onChange: CascaderProps['onChange'] = value => {
+  console.log(value);
 };
 
-ReactDOM.render(<App />, mountNode);
+ReactDOM.render(
+  <Cascader
+    style={{ width: '100%' }}
+    options={options}
+    onChange={onChange}
+    multiple
+    maxTagCount="responsive"
+  />,
+  mountNode,
+);
 ```

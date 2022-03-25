@@ -13,10 +13,11 @@ title:
 
 For instance, add an external link after the selected value.
 
-```jsx
+```tsx
 import { Cascader } from 'antd';
+import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const options = [
+const options: CascaderOptionType[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',
@@ -53,12 +54,16 @@ const options = [
   },
 ];
 
-function handleAreaClick(e, label, option) {
+const handleAreaClick = (
+  e: React.MouseEvent<HTMLAnchorElement>,
+  label: string,
+  option: CascaderOptionType,
+) => {
   e.stopPropagation();
   console.log('clicked', label, option);
-}
+};
 
-const displayRender = (labels, selectedOptions) =>
+const displayRender: CascaderProps['displayRender'] = (labels, selectedOptions) =>
   labels.map((label, i) => {
     const option = selectedOptions[i];
     if (i === labels.length - 1) {

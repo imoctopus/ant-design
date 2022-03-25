@@ -17,10 +17,11 @@ Load options lazily with `loadData`.
 
 > Note: `loadData` cannot work with `showSearch`.
 
-```jsx
+```tsx
 import { Cascader } from 'antd';
+import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const optionLists = [
+const optionLists: CascaderOptionType[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',
@@ -33,14 +34,14 @@ const optionLists = [
   },
 ];
 
-const LazyOptions = () => {
-  const [options, setOptions] = React.useState(optionLists);
+const App = () => {
+  const [options, setOptions] = React.useState<CascaderOptionType[]>(optionLists);
 
-  const onChange = (value, selectedOptions) => {
+  const onChange: CascaderProps['onChange'] = (value, selectedOptions) => {
     console.log(value, selectedOptions);
   };
 
-  const loadData = selectedOptions => {
+  const loadData = (selectedOptions: CascaderOptionType[]) => {
     const targetOption = selectedOptions[selectedOptions.length - 1];
     targetOption.loading = true;
 
@@ -64,5 +65,5 @@ const LazyOptions = () => {
   return <Cascader options={options} loadData={loadData} onChange={onChange} changeOnSelect />;
 };
 
-ReactDOM.render(<LazyOptions />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
