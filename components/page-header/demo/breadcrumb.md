@@ -13,7 +13,7 @@ title:
 
 With breadcrumbs, it is suitable for deeper pages, allowing users to navigate quickly.
 
-```jsx
+```tsx
 import { PageHeader } from 'antd';
 
 const routes = [

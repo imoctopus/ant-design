@@ -13,7 +13,7 @@ title:
 
 Standard header, suitable for use in scenarios that require a brief description.
 
-```jsx
+```tsx
 import { PageHeader } from 'antd';
 
 ReactDOM.render(
