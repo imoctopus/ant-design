@@ -13,7 +13,7 @@ title:
 
 A simple step bar in the vertical direction.
 
-```jsx
+```tsx
 import { Steps } from 'antd';
 
 const { Step } = Steps;

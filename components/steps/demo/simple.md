@@ -13,7 +13,7 @@ title:
 
 The most basic step bar.
 
-```jsx
+```tsx
 import { Steps } from 'antd';
 
 const { Step } = Steps;

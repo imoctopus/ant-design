@@ -13,7 +13,7 @@ title:
 
 Steps with progress.
 
-```jsx
+```tsx
 import { Steps } from 'antd';
 
 const { Step } = Steps;
