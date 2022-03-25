@@ -13,17 +13,16 @@ title:
 
 Auto wrap line.
 
-```jsx
+```tsx
 import { Space, Button } from 'antd';
 
-const Demo = () => (
+ReactDOM.render(
   <Space size={[8, 16]} wrap>
     {new Array(20).fill(null).map((_, index) => (
       // eslint-disable-next-line react/no-array-index-key
       <Button key={index}>Button</Button>
     ))}
-  </Space>
+  </Space>,
+  mountNode,
 );
-
-ReactDOM.render(<Demo />, mountNode);
 ```

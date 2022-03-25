@@ -13,7 +13,7 @@ title:
 
 Config item align.
 
-```jsx
+```tsx
 import { Space, Button } from 'antd';
 
 ReactDOM.render(

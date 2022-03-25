@@ -13,12 +13,11 @@ title:
 
 Custom spacing size.
 
-```jsx
-import React, { useState } from 'react';
+```tsx
 import { Space, Slider, Button } from 'antd';
 
-function SpaceCustomizeSize() {
-  const [size, setSize] = useState(8);
+const App = () => {
+  const [size, setSize] = React.useState(8);
 
   return (
     <>
@@ -33,7 +32,7 @@ function SpaceCustomizeSize() {
       </Space>
     </>
   );
-}
+};
 
-ReactDOM.render(<SpaceCustomizeSize />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
