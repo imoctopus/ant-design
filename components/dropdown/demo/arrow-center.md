@@ -13,7 +13,7 @@ title:
 
 By specifying `arrow` prop with `{ pointAtCenter: true }`, the arrow will point to the center of the target element.
 
-```jsx
+```tsx
 import { Menu, Dropdown, Button } from 'antd';
 
 const menu = (

@@ -13,7 +13,7 @@ title:
 
 The most basic dropdown menu.
 
-```jsx
+```tsx
 import { Menu, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 

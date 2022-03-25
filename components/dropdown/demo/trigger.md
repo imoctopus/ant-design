@@ -13,7 +13,7 @@ title:
 
 The default trigger mode is `hover`, you can change it to `click`.
 
-```jsx
+```tsx
 import { Menu, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 

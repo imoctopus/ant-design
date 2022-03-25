@@ -13,7 +13,7 @@ title:
 
 Divider and disabled menu item.
 
-```jsx
+```tsx
 import { Menu, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 

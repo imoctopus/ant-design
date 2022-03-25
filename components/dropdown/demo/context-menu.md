@@ -13,7 +13,7 @@ title:
 
 The default trigger mode is `hover`, you can change it to `contextMenu`.
 
-```jsx
+```tsx
 import { Menu, Dropdown } from 'antd';
 
 const menu = (

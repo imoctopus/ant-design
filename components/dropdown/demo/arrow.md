@@ -13,7 +13,7 @@ title:
 
 You could display an arrow.
 
-```jsx
+```tsx
 import { Menu, Dropdown, Button } from 'antd';
 
 const menu = (

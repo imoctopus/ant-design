@@ -13,11 +13,12 @@ title:
 
 An event will be triggered when you click menu items, in which you can make different operations according to item's key.
 
-```jsx
+```tsx
 import { Menu, Dropdown, message } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
+import { MenuInfo } from 'rc-menu/lib/interface';
 
-const onClick = ({ key }) => {
+const onClick = ({ key }: MenuInfo) => {
   message.info(`Click on item ${key}`);
 };
 
