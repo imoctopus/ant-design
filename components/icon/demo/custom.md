@@ -13,9 +13,10 @@ title:
 
 Create a reusable React component by using `<Icon component={...} />`. The property `component` takes a React component that renders to `svg` element.
 
-```jsx
+```tsx
 import { Space } from 'antd';
 import Icon, { HomeOutlined } from '@ant-design/icons';
+import type { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon';
 
 const HeartSvg = () => (
   <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 1024 1024">
@@ -68,9 +69,13 @@ const PandaSvg = () => (
   </svg>
 );
 
-const HeartIcon = props => <Icon component={HeartSvg} {...props} />;
+const HeartIcon = (props: Partial<CustomIconComponentProps>) => (
+  <Icon component={HeartSvg} {...props} />
+);
 
-const PandaIcon = props => <Icon component={PandaSvg} {...props} />;
+const PandaIcon = (props: Partial<CustomIconComponentProps>) => (
+  <Icon component={PandaSvg} {...props} />
+);
 
 ReactDOM.render(
   <Space>
