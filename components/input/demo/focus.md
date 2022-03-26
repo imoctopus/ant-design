@@ -16,7 +16,7 @@ Focus with additional option.
 ```tsx
 import { Input, Space, Button, Switch } from 'antd';
 
-const Demo = () => {
+const App = () => {
   const inputRef = React.useRef<any>(null);
   const [input, setInput] = React.useState(true);
 
@@ -80,5 +80,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

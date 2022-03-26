@@ -13,7 +13,7 @@ title:
 
 Search loading when onSearch.
 
-```jsx
+```tsx
 import { Input } from 'antd';
 
 const { Search } = Input;

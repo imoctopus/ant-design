@@ -6,7 +6,7 @@ title:
 debug: true
 ---
 
-```jsx
+```tsx
 import {
   Typography,
   Button,

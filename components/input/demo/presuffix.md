@@ -13,7 +13,7 @@ title:
 
 Add a prefix or suffix icons inside input.
 
-```jsx
+```tsx
 import { Input, Tooltip } from 'antd';
 import { InfoCircleOutlined, UserOutlined } from '@ant-design/icons';
 

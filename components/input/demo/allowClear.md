@@ -13,12 +13,12 @@ title:
 
 Input box with the remove icon, click the icon to delete everything.
 
-```jsx
+```tsx
 import { Input } from 'antd';
 
 const { TextArea } = Input;
 
-const onChange = e => {
+const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
   console.log(e);
 };
 

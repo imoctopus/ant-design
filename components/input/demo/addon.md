@@ -13,7 +13,7 @@ title:
 
 Using pre & post tabs example.
 
-```jsx
+```tsx
 import { Input, Select, Space, Cascader } from 'antd';
 import { SettingOutlined } from '@ant-design/icons';
 
