@@ -17,7 +17,7 @@ Use `<Typography.Text ellipsis>` in label should show `...`.
 ```tsx
 import { Form, Input, Typography } from 'antd';
 
-const Demo = () => (
+const App = () => (
   <Form name="label-ellipsis" labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
     <Form.Item
       label={
@@ -43,5 +43,5 @@ const Demo = () => (
   </Form>
 );
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

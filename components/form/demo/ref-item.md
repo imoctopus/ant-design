@@ -14,11 +14,10 @@ debug: true
 
 Use `ref` first!
 
-```jsx
-import React from 'react';
+```tsx
 import { Button, Form, Input } from 'antd';
 
-const Demo = () => {
+const App = () => {
   const [form] = Form.useForm();
   const ref = React.useRef();
 
@@ -57,5 +56,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

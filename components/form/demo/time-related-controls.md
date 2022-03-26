@@ -35,7 +35,7 @@ const rangeConfig = {
   rules: [{ type: 'array' as const, required: true, message: 'Please select time!' }],
 };
 
-const TimeRelatedForm = () => {
+const App = () => {
   const onFinish = (fieldsValue: any) => {
     // Should format date value before submit.
     const rangeValue = fieldsValue['range-picker'];
@@ -89,5 +89,5 @@ const TimeRelatedForm = () => {
   );
 };
 
-ReactDOM.render(<TimeRelatedForm />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

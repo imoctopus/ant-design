@@ -18,7 +18,7 @@ We can store form data into upper component or [Redux](https://github.com/reactj
 **Note:** Save Form data globally [is not a good practice](https://github.com/reduxjs/redux/issues/1287#issuecomment-175351978). You should avoid this if not necessary.
 
 ```tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Form, Input } from 'antd';
 
 interface FieldData {
@@ -53,7 +53,7 @@ const CustomizedForm: React.FC<CustomizedFormProps> = ({ onChange, fields }) => 
   </Form>
 );
 
-const Demo = () => {
+const App = () => {
   const [fields, setFields] = useState<FieldData[]>([{ name: ['username'], value: 'Ant Design' }]);
 
   return (
@@ -69,7 +69,7 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
 
 <style>

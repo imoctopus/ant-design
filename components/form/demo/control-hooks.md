@@ -30,7 +30,7 @@ const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 };
 
-const Demo = () => {
+const App = () => {
   const [form] = Form.useForm();
 
   const onGenderChange = (value: string) => {
@@ -104,7 +104,7 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
 
 ```css
