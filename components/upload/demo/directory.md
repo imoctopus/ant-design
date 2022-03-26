@@ -13,7 +13,7 @@ title:
 
 You can select and upload a whole directory.
 
-```jsx
+```tsx
 import { Upload, Button } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 

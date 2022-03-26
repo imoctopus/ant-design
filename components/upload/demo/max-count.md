@@ -13,7 +13,7 @@ title:
 
 Limit files with `maxCount`. Will replace current one when `maxCount` is `1`.
 
-```jsx
+```tsx
 import { Upload, Button, Space } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 

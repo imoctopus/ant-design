@@ -13,11 +13,12 @@ title:
 
 Use `showUploadList` for custom action icons of files.
 
-```jsx
+```tsx
 import { Upload, Button } from 'antd';
 import { UploadOutlined, StarOutlined } from '@ant-design/icons';
+import type { UploadProps } from 'antd';
 
-const props = {
+const props: UploadProps = {
   action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
   onChange({ file, fileList }) {
     if (file.status !== 'uploading') {
