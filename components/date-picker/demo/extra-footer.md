@@ -13,7 +13,7 @@ title:
 
 Render extra footer in panel for customized requirements.
 
-```jsx
+```tsx
 import { DatePicker, Space } from 'antd';
 
 const { RangePicker } = DatePicker;

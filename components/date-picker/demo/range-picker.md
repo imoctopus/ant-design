@@ -13,7 +13,7 @@ title:
 
 Set range picker type by `picker` prop.
 
-```jsx
+```tsx
 import { DatePicker, Space } from 'antd';
 
 const { RangePicker } = DatePicker;

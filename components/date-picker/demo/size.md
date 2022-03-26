@@ -13,37 +13,34 @@ title:
 
 The input box comes in three sizes. `default` will be used if `size` is omitted.
 
-```jsx
+```tsx
 import { DatePicker, Radio, Space } from 'antd';
+import type { RadioChangeEvent } from 'antd';
+import type { SizeType } from 'antd/es/config-provider/SizeContext';
 
 const { RangePicker } = DatePicker;
 
-class PickerSizesDemo extends React.Component {
-  state = {
-    size: 'default',
+const App = () => {
+  const [size, setSize] = React.useState<SizeType>('default');
+
+  const handleSizeChange = (e: RadioChangeEvent) => {
+    setSize(e.target.value);
   };
 
-  handleSizeChange = e => {
-    this.setState({ size: e.target.value });
-  };
+  return (
+    <Space direction="vertical" size={12}>
+      <Radio.Group value={size} onChange={handleSizeChange}>
+        <Radio.Button value="large">Large</Radio.Button>
+        <Radio.Button value="default">Default</Radio.Button>
+        <Radio.Button value="small">Small</Radio.Button>
+      </Radio.Group>
+      <DatePicker size={size} />
+      <DatePicker size={size} picker="month" />
+      <RangePicker size={size} />
+      <DatePicker size={size} picker="week" />
+    </Space>
+  );
+};
 
-  render() {
-    const { size } = this.state;
-    return (
-      <Space direction="vertical" size={12}>
-        <Radio.Group value={size} onChange={this.handleSizeChange}>
-          <Radio.Button value="large">Large</Radio.Button>
-          <Radio.Button value="default">Default</Radio.Button>
-          <Radio.Button value="small">Small</Radio.Button>
-        </Radio.Group>
-        <DatePicker size={size} />
-        <DatePicker size={size} picker="month" />
-        <RangePicker size={size} />
-        <DatePicker size={size} picker="week" />
-      </Space>
-    );
-  }
-}
-
-ReactDOM.render(<PickerSizesDemo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

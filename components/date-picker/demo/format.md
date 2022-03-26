@@ -13,9 +13,10 @@ title:
 
 We can set the date format by `format`.
 
-```jsx
+```tsx
 import { DatePicker, Space } from 'antd';
 import moment from 'moment';
+import type { DatePickerProps } from 'antd';
 
 const { RangePicker } = DatePicker;
 
@@ -25,9 +26,10 @@ const monthFormat = 'YYYY/MM';
 
 const dateFormatList = ['DD/MM/YYYY', 'DD/MM/YY'];
 
-const customFormat = value => `custom format: ${value.format(dateFormat)}`;
+const customFormat: DatePickerProps['format'] = value =>
+  `custom format: ${value.format(dateFormat)}`;
 
-const customWeekStartEndFormat = value =>
+const customWeekStartEndFormat: DatePickerProps['format'] = value =>
   `${moment(value).startOf('week').format(weekFormat)} ~ ${moment(value)
     .endOf('week')
     .format(weekFormat)}`;

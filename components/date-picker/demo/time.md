@@ -13,19 +13,23 @@ title:
 
 This property provide an additional time selection. When `showTime` is an Object, its properties will be passed on to built-in `TimePicker`.
 
-```jsx
+```tsx
 import { DatePicker, Space } from 'antd';
+import type { DatePickerProps, RangePickerProps } from 'antd/lib/date-picker';
 
 const { RangePicker } = DatePicker;
 
-function onChange(value, dateString) {
+const onChange = (
+  value: DatePickerProps['value'] | RangePickerProps['value'],
+  dateString: [string, string] | string,
+) => {
   console.log('Selected Time: ', value);
   console.log('Formatted Selected Time: ', dateString);
-}
+};
 
-function onOk(value) {
+const onOk = (value: DatePickerProps['value'] | RangePickerProps['value']) => {
   console.log('onOk: ', value);
-}
+};
 
 ReactDOM.render(
   <Space direction="vertical" size={12}>

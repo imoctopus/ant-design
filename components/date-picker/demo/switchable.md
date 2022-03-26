@@ -13,20 +13,29 @@ title:
 
 Switch in different types of pickers by Select.
 
-```jsx
-import React, { useState } from 'react';
+```tsx
 import { DatePicker, TimePicker, Select, Space } from 'antd';
+import type { TimePickerProps, DatePickerProps } from 'antd';
 
 const { Option } = Select;
 
-function PickerWithType({ type, onChange }) {
+type PickerType = 'time' | 'date';
+
+const PickerWithType = ({
+  type,
+  onChange,
+}: {
+  type: PickerType;
+  onChange: TimePickerProps['onChange'] | DatePickerProps['onChange'];
+}) => {
   if (type === 'time') return <TimePicker onChange={onChange} />;
   if (type === 'date') return <DatePicker onChange={onChange} />;
   return <DatePicker picker={type} onChange={onChange} />;
-}
+};
 
-function SwitchablePicker() {
-  const [type, setType] = useState('time');
+const App = () => {
+  const [type, setType] = React.useState<PickerType>('time');
+
   return (
     <Space>
       <Select value={type} onChange={setType}>
@@ -40,7 +49,7 @@ function SwitchablePicker() {
       <PickerWithType type={type} onChange={value => console.log(value)} />
     </Space>
   );
-}
+};
 
-ReactDOM.render(<SwitchablePicker />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

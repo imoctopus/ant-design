@@ -14,16 +14,17 @@ title:
 
 Basic use case. Users can select or input a date in panel.
 
-```jsx
+```tsx
 import { DatePicker, Space } from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
+import type { DatePickerProps } from 'antd';
 
 const smileIcon = <SmileOutlined />;
 const { RangePicker } = DatePicker;
 
-function onChange(date, dateString) {
+const onChange: DatePickerProps['onChange'] = (date, dateString) => {
   console.log(date, dateString);
-}
+};
 
 ReactDOM.render(
   <Space direction="vertical" size={12}>
