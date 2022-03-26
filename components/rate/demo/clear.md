@@ -13,7 +13,7 @@ title:
 
 Support set allow to clear star when click again.
 
-```jsx
+```tsx
 import { Rate } from 'antd';
 
 ReactDOM.render(
