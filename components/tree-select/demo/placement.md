@@ -13,16 +13,18 @@ title:
 
 You can manually specify the position of the popup via `placement`.
 
-```jsx
-import React, { useState } from 'react';
+```tsx
+import { useState } from 'react';
 import { TreeSelect, Radio } from 'antd';
+import type { SelectCommonPlacement } from 'antd/lib/_util/motion';
+import type { RadioChangeEvent } from 'antd';
 
 const { TreeNode } = TreeSelect;
 
-const Demo = () => {
-  const [placement, SetPlacement] = useState('topLeft');
+const App = () => {
+  const [placement, SetPlacement] = useState<SelectCommonPlacement>('topLeft');
 
-  const placementChange = e => {
+  const placementChange = (e: RadioChangeEvent) => {
     SetPlacement(e.target.value);
   };
 
@@ -60,5 +62,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
