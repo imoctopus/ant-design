@@ -13,7 +13,7 @@ title:
 
 Search the options with sorting.
 
-```jsx
+```tsx
 import { Select } from 'antd';
 
 const { Option } = Select;

@@ -13,18 +13,18 @@ title:
 
 Search the options while expanded.
 
-```jsx
+```tsx
 import { Select } from 'antd';
 
 const { Option } = Select;
 
-function onChange(value) {
+const onChange = (value: string) => {
   console.log(`selected ${value}`);
-}
+};
 
-function onSearch(val) {
-  console.log('search:', val);
-}
+const onSearch = (value: string) => {
+  console.log('search:', value);
+};
 
 ReactDOM.render(
   <Select

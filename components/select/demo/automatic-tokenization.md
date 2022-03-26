@@ -13,7 +13,7 @@ title:
 
 Try to copy `Lucy,Jack` and paste to the input. Only available in tags and multiple mode.
 
-```jsx
+```tsx
 import { Select } from 'antd';
 
 const { Option } = Select;
@@ -23,9 +23,9 @@ for (let i = 10; i < 36; i++) {
   children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
 }
 
-function handleChange(value) {
+const handleChange = (value: string) => {
   console.log(`selected ${value}`);
-}
+};
 
 ReactDOM.render(
   <Select mode="tags" style={{ width: '100%' }} onChange={handleChange} tokenSeparators={[',']}>

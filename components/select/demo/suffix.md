@@ -14,7 +14,7 @@ title:
 
 Basic Usage.
 
-```jsx
+```tsx
 import { Select } from 'antd';
 import { SmileOutlined, MehOutlined } from '@ant-design/icons';
 
@@ -22,9 +22,9 @@ const smileIcon = <SmileOutlined />;
 const mehIcon = <MehOutlined />;
 const { Option } = Select;
 
-function handleChange(value) {
+const handleChange = (value: string) => {
   console.log(`selected ${value}`);
-}
+};
 
 ReactDOM.render(
   <>

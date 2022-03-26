@@ -14,14 +14,14 @@ debug: true
 
 Basic Usage.
 
-```jsx
+```tsx
 import { Select, Input, Button } from 'antd';
 
 const { Option } = Select;
 
-function handleChange(value) {
+const handleChange = (value: string | string[]) => {
   console.log(`selected ${value}`);
-}
+};
 
 ReactDOM.render(
   <div
