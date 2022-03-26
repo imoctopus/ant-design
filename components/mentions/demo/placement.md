@@ -13,7 +13,7 @@ title:
 
 Change the suggestions placement.
 
-```jsx
+```tsx
 import { Mentions } from 'antd';
 
 const { Option } = Mentions;
