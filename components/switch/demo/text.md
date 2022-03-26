@@ -13,7 +13,7 @@ title:
 
 With text and icon.
 
-```jsx
+```tsx
 import { Switch } from 'antd';
 import { CloseOutlined, CheckOutlined } from '@ant-design/icons';
 
