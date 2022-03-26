@@ -13,9 +13,9 @@ title:
 
 Add a prefix inside input.
 
-```jsx
+```tsx
 import { InputNumber } from 'antd';
-import { InfoCircleOutlined, SmileOutlined, UserOutlined } from '@ant-design/icons';
+import { UserOutlined } from '@ant-design/icons';
 
 ReactDOM.render(
   <>

@@ -18,6 +18,7 @@ import { InputNumber, Checkbox, Space } from 'antd';
 
 const App = () => {
   const [keyboard, setKeyboard] = React.useState(true);
+
   return (
     <Space>
       <InputNumber min={1} max={10} keyboard={keyboard} defaultValue={3} />
