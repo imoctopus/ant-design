@@ -13,12 +13,13 @@ title:
 
 The combination of radio button style.
 
-```jsx
+```tsx
 import { Radio } from 'antd';
+import type { RadioChangeEvent } from 'antd';
 
-function onChange(e) {
+const onChange = (e: RadioChangeEvent) => {
   console.log(`radio checked:${e.target.value}`);
-}
+};
 
 ReactDOM.render(
   <>

@@ -13,7 +13,7 @@ title:
 
 Solid radio button style.
 
-```jsx
+```tsx
 import { Radio } from 'antd';
 
 ReactDOM.render(

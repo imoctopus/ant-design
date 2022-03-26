@@ -14,7 +14,7 @@ title:
 
 Test Badge style.
 
-```jsx
+```tsx
 import { Radio, Badge } from 'antd';
 
 ReactDOM.render(
