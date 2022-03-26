@@ -13,7 +13,7 @@ title:
 
 Show stepped options by `hourStep` `minuteStep` `secondStep`.
 
-```jsx
+```tsx
 import { TimePicker } from 'antd';
 
 ReactDOM.render(<TimePicker minuteStep={15} secondStep={10} />, mountNode);

@@ -13,19 +13,20 @@ value 和 onChange 需要配合使用。
 
 `value` and `onChange` should be used together,
 
-```jsx
-import React, { useState } from 'react';
+```tsx
+import { useState } from 'react';
 import { TimePicker } from 'antd';
+import type { Moment } from 'moment';
 
-const Demo = () => {
+const App = () => {
   const [value, setValue] = useState(null);
 
-  const onChange = time => {
+  const onChange = (time: Moment) => {
     setValue(time);
   };
 
   return <TimePicker value={value} onChange={onChange} />;
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

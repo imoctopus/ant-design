@@ -13,7 +13,7 @@ title:
 
 Bordered-less style component.
 
-```jsx
+```tsx
 import { TimePicker } from 'antd';
 
 const { RangePicker } = TimePicker;

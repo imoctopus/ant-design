@@ -14,11 +14,12 @@ debug: true
 
 Passing custom class to `TimePicker` popup
 
-```jsx
+```tsx
 import { TimePicker } from 'antd';
 import moment from 'moment';
+import type { Moment } from 'moment';
 
-const onChange = (time, timeString) => {
+const onChange = (time: Moment, timeString: string) => {
   console.log(time, timeString);
 };
 
