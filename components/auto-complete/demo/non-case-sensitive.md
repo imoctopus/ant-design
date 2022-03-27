@@ -22,7 +22,7 @@ const options = [
   { value: 'Wall Street' },
 ];
 
-const Complete: React.FC = () => (
+const App = () => (
   <AutoComplete
     style={{ width: 200 }}
     options={options}
@@ -33,5 +33,5 @@ const Complete: React.FC = () => (
   />
 );
 
-ReactDOM.render(<Complete />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
