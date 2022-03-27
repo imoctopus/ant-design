@@ -13,19 +13,20 @@ title:
 
 A button is on the left, and a related functional menu is on the right. You can set the icon property to modify the icon of right.
 
-```jsx
+```tsx
 import { Menu, Dropdown, Button, message, Space, Tooltip } from 'antd';
 import { DownOutlined, UserOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
 
-function handleButtonClick(e) {
+const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
   message.info('Click on left button.');
   console.log('click left button', e);
-}
+};
 
-function handleMenuClick(e) {
+const handleMenuClick: MenuProps['onClick'] = e => {
   message.info('Click on menu item.');
   console.log('click', e);
-}
+};
 
 const menu = (
   <Menu onClick={handleMenuClick}>
@@ -58,7 +59,7 @@ ReactDOM.render(
         <Tooltip title="tooltip" key="leftButton">
           {leftButton}
         </Tooltip>,
-        React.cloneElement(rightButton, { loading: true }),
+        React.cloneElement(rightButton as React.ReactElement<any, string>, { loading: true }),
       ]}
     >
       With Tooltip

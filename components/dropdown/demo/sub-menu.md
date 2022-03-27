@@ -13,7 +13,7 @@ title:
 
 The menu has multiple levels.
 
-```jsx
+```tsx
 import { Menu, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 
