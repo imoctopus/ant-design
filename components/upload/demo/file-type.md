@@ -73,11 +73,11 @@ const App = () => {
 
   const handlePreview = async (file: UploadFile) => {
     if (!file.url && !file.preview) {
-      file.preview = await getBase64(file.originFileObj);
+      file.preview = await getBase64(file.originFileObj as RcFile);
     }
 
     setPreviewVisible(true);
-    setPreviewImage(file.url || file.preview);
+    setPreviewImage(file.url || (file.preview as string));
   };
 
   const handleChange: UploadProps['onChange'] = ({ fileList: newFileList }) =>

@@ -66,7 +66,7 @@ const AliyunOSSUpload = ({ value, onChange }: AliyunOSSUploadProps) => {
   };
 
   const onRemove = (file: UploadFile) => {
-    const files = value.filter(v => v.url !== file.url);
+    const files = (value || []).filter(v => v.url !== file.url);
 
     if (onChange) {
       onChange(files);
@@ -75,12 +75,14 @@ const AliyunOSSUpload = ({ value, onChange }: AliyunOSSUploadProps) => {
 
   const getExtraData: UploadProps['data'] = file => ({
     key: file.url,
-    OSSAccessKeyId: OSSData.accessId,
-    policy: OSSData.policy,
-    Signature: OSSData.signature,
+    OSSAccessKeyId: OSSData?.accessId,
+    policy: OSSData?.policy,
+    Signature: OSSData?.signature,
   });
 
   const beforeUpload: UploadProps['beforeUpload'] = async file => {
+    if (!OSSData) return false;
+
     const expire = Number(OSSData.expire) * 1000;
 
     if (expire < Date.now()) {

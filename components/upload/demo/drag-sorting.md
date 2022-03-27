@@ -37,7 +37,7 @@ const DragableUploadListItem = ({
   file,
   fileList,
 }: DragableUploadListItemProps) => {
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement>(null);
   const index = fileList.indexOf(file);
   const [{ isOver, dropClassName }, drop] = useDrop({
     accept: type,
@@ -51,7 +51,7 @@ const DragableUploadListItem = ({
         dropClassName: dragIndex < index ? ' drop-over-downward' : ' drop-over-upward',
       };
     },
-    drop: item => {
+    drop: (item: any) => {
       moveRow(item.index, index);
     },
   });
