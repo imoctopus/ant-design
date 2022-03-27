@@ -14,14 +14,15 @@ title:
 
 Test style of Steps inside Steps.
 
-```jsx
-import React, { useState } from 'react';
+```tsx
 import { Steps, Radio, Card } from 'antd';
+import type { StepsProps } from 'antd';
 
 const { Step } = Steps;
 
 const App = () => {
-  const [size, setSize] = useState('default');
+  const [size, setSize] = React.useState<StepsProps['size']>('default');
+
   const horizontalSteps = (
     <Card>
       <Steps size={size}>
@@ -31,6 +32,7 @@ const App = () => {
       </Steps>
     </Card>
   );
+
   return (
     <>
       <Radio.Group

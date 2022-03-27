@@ -13,7 +13,7 @@ title:
 
 Steps with progress dot style.
 
-```jsx
+```tsx
 import { Steps, Divider } from 'antd';
 
 const { Step } = Steps;

@@ -13,7 +13,7 @@ title:
 
 By setting like this: `<Steps size="small">`, you can get a mini version.
 
-```jsx
+```tsx
 import { Steps } from 'antd';
 
 const { Step } = Steps;

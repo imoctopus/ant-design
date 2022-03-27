@@ -13,12 +13,13 @@ title:
 
 You can customize the display for Steps with progress dot style.
 
-```jsx
+```tsx
 import { Steps, Popover } from 'antd';
+import type { StepsProps } from 'antd';
 
 const { Step } = Steps;
 
-const customDot = (dot, { status, index }) => (
+const customDot: StepsProps['progressDot'] = (dot, { status, index }) => (
   <Popover
     content={
       <span>

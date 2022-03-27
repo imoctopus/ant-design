@@ -13,7 +13,7 @@ title:
 
 You can use your own custom icons by setting the property `icon` for `Steps.Step`.
 
-```jsx
+```tsx
 import { Steps } from 'antd';
 import { UserOutlined, SolutionOutlined, LoadingOutlined, SmileOutlined } from '@ant-design/icons';
 

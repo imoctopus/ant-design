@@ -13,7 +13,7 @@ title:
 
 By using `status` of `Steps`, you can specify the state for current step.
 
-```jsx
+```tsx
 import { Steps } from 'antd';
 
 const { Step } = Steps;
