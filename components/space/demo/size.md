@@ -19,9 +19,10 @@ Set the size to `large` and `middle` by setting size to large and middle respect
 
 ```tsx
 import { Space, Radio, Button } from 'antd';
+import type { SpaceSize } from 'antd/lib/space';
 
-function App() {
-  const [size, setSize] = React.useState('small');
+const App = () => {
+  const [size, setSize] = React.useState<SpaceSize | [SpaceSize, SpaceSize]>('small');
 
   return (
     <>
@@ -40,7 +41,7 @@ function App() {
       </Space>
     </>
   );
-}
+};
 
 ReactDOM.render(<App />, mountNode);
 ```
