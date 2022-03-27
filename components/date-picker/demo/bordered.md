@@ -13,7 +13,7 @@ title:
 
 Bordered-less style component.
 
-```jsx
+```tsx
 import { DatePicker, Space } from 'antd';
 
 const { RangePicker } = DatePicker;

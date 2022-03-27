@@ -13,12 +13,13 @@ title:
 
 Basic use case. Users can select or input a date in panel.
 
-```jsx
+```tsx
 import { DatePicker, Space } from 'antd';
+import type { DatePickerProps } from 'antd';
 
-function onChange(date, dateString) {
+const onChange: DatePickerProps['onChange'] = (date, dateString) => {
   console.log(date, dateString);
-}
+};
 
 ReactDOM.render(
   <Space direction="vertical">

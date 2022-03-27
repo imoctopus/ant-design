@@ -13,16 +13,17 @@ title:
 
 We can set preset ranges to RangePicker to improve user experience.
 
-```jsx
+```tsx
 import { DatePicker, Space } from 'antd';
 import moment from 'moment';
+import type { RangePickerProps } from 'antd/es/date-picker';
 
 const { RangePicker } = DatePicker;
 
-function onChange(dates, dateStrings) {
-  console.log('From: ', dates[0], ', to: ', dates[1]);
+const onChange: RangePickerProps['onChange'] = (dates, dateStrings) => {
+  console.log('From: ', dates?.[0], ', to: ', dates?.[1]);
   console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
-}
+};
 
 ReactDOM.render(
   <Space direction="vertical" size={12}>

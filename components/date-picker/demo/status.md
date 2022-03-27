@@ -17,7 +17,7 @@ Add status to DatePicker with `status`, which could be `error` or `warning`.
 ```tsx
 import { DatePicker, Space } from 'antd';
 
-const Status: React.FC = () => (
+const App = () => (
   <Space direction="vertical" style={{ width: '100%' }}>
     <DatePicker status="error" style={{ width: '100%' }} />
     <DatePicker status="warning" style={{ width: '100%' }} />
@@ -26,5 +26,5 @@ const Status: React.FC = () => (
   </Space>
 );
 
-ReactDOM.render(<Status />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
