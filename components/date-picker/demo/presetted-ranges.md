@@ -16,7 +16,7 @@ We can set preset ranges to RangePicker to improve user experience.
 ```tsx
 import { DatePicker, Space } from 'antd';
 import moment from 'moment';
-import type { RangePickerProps } from 'antd/lib/date-picker';
+import type { RangePickerProps } from 'antd/es/date-picker';
 
 const { RangePicker } = DatePicker;
 

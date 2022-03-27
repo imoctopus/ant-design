@@ -15,7 +15,7 @@ Basic usage.
 
 ```tsx
 import { Mentions } from 'antd';
-import type { OptionProps } from 'antd/lib/mentions';
+import type { OptionProps } from 'antd/es/mentions';
 
 const { Option } = Mentions;
 

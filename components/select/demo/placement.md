@@ -15,7 +15,7 @@ You can manually specify the position of the popup via `placement`.
 
 ```tsx
 import { Select, Radio } from 'antd';
-import type { SelectCommonPlacement } from 'antd/lib/_util/motion';
+import type { SelectCommonPlacement } from 'antd/es/_util/motion';
 import type { RadioChangeEvent } from 'antd';
 
 const { Option } = Select;

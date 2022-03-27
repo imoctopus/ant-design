@@ -15,7 +15,7 @@ Basic usage of checkbox.
 
 ```tsx
 import { Checkbox } from 'antd';
-import type { CheckboxChangeEvent } from 'antd/lib/checkbox';
+import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 
 const onChange = (e: CheckboxChangeEvent) => {
   console.log(`checked = ${e.target.checked}`);

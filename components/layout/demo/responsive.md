@@ -20,7 +20,7 @@ Layout.Sider supports responsive layout.
 ```tsx
 import { Layout, Menu } from 'antd';
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
-import type { CollapseType } from 'antd/lib/layout/Sider';
+import type { CollapseType } from 'antd/es/layout/Sider';
 
 const { Header, Content, Footer, Sider } = Layout;
 

@@ -15,7 +15,7 @@ Communicated with other components.
 
 ```tsx
 import { Checkbox, Button } from 'antd';
-import type { CheckboxChangeEvent } from 'antd/lib/checkbox';
+import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 
 const App = () => {
   const [checked, setChecked] = React.useState(true);

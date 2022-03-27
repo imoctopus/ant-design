@@ -22,7 +22,7 @@ import {
   SettingOutlined,
   LinkOutlined,
 } from '@ant-design/icons';
-import type { MenuTheme } from 'antd/lib/menu';
+import type { MenuTheme } from 'antd/es/menu';
 
 const { SubMenu } = Menu;
 

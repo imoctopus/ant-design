@@ -15,7 +15,7 @@ The height of the input field for the select defaults to 32px. If size is set to
 
 ```tsx
 import { Select, Radio } from 'antd';
-import type { SizeType } from 'antd/lib/config-provider/SizeContext';
+import type { SizeType } from 'antd/es/config-provider/SizeContext';
 import type { RadioChangeEvent } from 'antd';
 
 const { Option } = Select;

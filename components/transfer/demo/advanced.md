@@ -18,7 +18,7 @@ You can customize the labels of the transfer buttons, the width and height of th
 ```tsx
 import { Transfer, Button } from 'antd';
 import { useState, useEffect } from 'react';
-import type { TransferDirection, TransferListProps } from 'antd/lib/transfer';
+import type { TransferDirection, TransferListProps } from 'antd/es/transfer';
 
 interface RecordType {
   key: string;

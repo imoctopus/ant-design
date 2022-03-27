@@ -15,7 +15,7 @@ This property provide an additional time selection. When `showTime` is an Object
 
 ```tsx
 import { DatePicker, Space } from 'antd';
-import type { DatePickerProps, RangePickerProps } from 'antd/lib/date-picker';
+import type { DatePickerProps, RangePickerProps } from 'antd/es/date-picker';
 
 const { RangePicker } = DatePicker;
 

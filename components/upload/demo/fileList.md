@@ -24,7 +24,7 @@ You can gain full control over filelist by configuring `fileList`. You can accom
 ```tsx
 import { Upload, Button } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
-import type { UploadFile } from 'antd/lib/upload/interface';
+import type { UploadFile } from 'antd/es/upload/interface';
 import type { UploadProps } from 'antd';
 
 const App = () => {

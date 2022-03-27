@@ -15,8 +15,8 @@ The `indeterminate` property can help you to achieve a 'check all' effect.
 
 ```tsx
 import { Checkbox, Divider } from 'antd';
-import type { CheckboxValueType } from 'antd/lib/checkbox/Group';
-import type { CheckboxChangeEvent } from 'antd/lib/checkbox';
+import type { CheckboxValueType } from 'antd/es/checkbox/Group';
+import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 
 const CheckboxGroup = Checkbox.Group;
 

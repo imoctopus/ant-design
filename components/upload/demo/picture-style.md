@@ -16,7 +16,7 @@ If uploaded file is a picture, the thumbnail can be shown. `IE8/9` do not suppor
 ```tsx
 import { Upload, Button } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
-import type { UploadFile } from 'antd/lib/upload/interface';
+import type { UploadFile } from 'antd/es/upload/interface';
 
 const fileList: UploadFile[] = [
   {

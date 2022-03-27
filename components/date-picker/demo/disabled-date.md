@@ -16,7 +16,7 @@ Disabled part of dates and time by `disabledDate` and `disabledTime` respectivel
 ```tsx
 import moment from 'moment';
 import { DatePicker, Space } from 'antd';
-import type { RangePickerProps } from 'antd/lib/date-picker';
+import type { RangePickerProps } from 'antd/es/date-picker';
 
 const { RangePicker } = DatePicker;
 

@@ -15,7 +15,7 @@ Generate a group of checkboxes from an array.
 
 ```tsx
 import { Checkbox } from 'antd';
-import type { CheckboxValueType } from 'antd/lib/checkbox/Group';
+import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 
 const onChange = (checkedValues: CheckboxValueType[]) => {
   console.log('checked = ', checkedValues);

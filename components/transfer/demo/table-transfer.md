@@ -17,8 +17,8 @@ Customize render list with Table component.
 import { Transfer, Switch, Table, Tag } from 'antd';
 import difference from 'lodash/difference';
 import { useState } from 'react';
-import type { TransferItem, TransferProps } from 'antd/lib/transfer';
-import type { ColumnsType, TableRowSelection } from 'antd/lib/table/interface';
+import type { TransferItem, TransferProps } from 'antd/es/transfer';
+import type { ColumnsType, TableRowSelection } from 'antd/es/table/interface';
 
 interface RecordType {
   key: string;

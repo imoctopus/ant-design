@@ -15,7 +15,7 @@ Add status to Mentions with `status`, which could be `error` or `warning`。
 
 ```tsx
 import { Mentions, Space } from 'antd';
-import type { OptionProps } from 'antd/lib/mentions';
+import type { OptionProps } from 'antd/es/mentions';
 
 const { Option } = Mentions;
 

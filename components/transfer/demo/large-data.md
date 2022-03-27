@@ -16,7 +16,7 @@ large count of items with pagination.
 ```tsx
 import { useState, useEffect } from 'react';
 import { Transfer, Switch } from 'antd';
-import type { TransferDirection } from 'antd/lib/transfer';
+import type { TransferDirection } from 'antd/es/transfer';
 
 interface RecordType {
   key: string;

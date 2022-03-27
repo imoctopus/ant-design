@@ -20,7 +20,7 @@ If a large or small button is desired, set the `size` property to either `large`
 ```tsx
 import { Button, Radio } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
-import type { SizeType } from 'antd/lib/config-provider/SizeContext';
+import type { SizeType } from 'antd/es/config-provider/SizeContext';
 
 const App = () => {
   const [size, setSize] = React.useState<SizeType>('large');

@@ -20,7 +20,7 @@ import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
 import { UploadOutlined } from '@ant-design/icons';
-import type { UploadFile, UploadProps } from 'antd/lib/upload/interface';
+import type { UploadFile, UploadProps } from 'antd/es/upload/interface';
 
 const type = 'DragableUploadList';
 

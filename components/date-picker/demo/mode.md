@@ -16,7 +16,7 @@ Determing which panel to show with `mode` and `onPanelChange`.
 
 ```tsx
 import { DatePicker, Space } from 'antd';
-import type { RangePickerProps } from 'antd/lib/date-picker';
+import type { RangePickerProps } from 'antd/es/date-picker';
 import type { Moment } from 'moment';
 import type { DatePickerProps } from 'antd';
 

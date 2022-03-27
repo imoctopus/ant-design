@@ -16,7 +16,7 @@ Asynchronous loading tree node.
 ```tsx
 import { useState } from 'react';
 import { TreeSelect } from 'antd';
-import type { DefaultOptionType } from 'antd/lib/select';
+import type { DefaultOptionType } from 'antd/es/select';
 import type { TreeSelectProps } from 'antd';
 
 const App = () => {

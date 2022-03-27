@@ -16,7 +16,7 @@ Use [antd-img-crop](https://github.com/nanxiaobei/antd-img-crop) to crop image b
 ```tsx
 import { Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
-import type { RcFile, UploadFile, UploadProps } from 'antd/lib/upload/interface';
+import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
 
 const App = () => {
   const [fileList, setFileList] = React.useState<UploadFile[]>([

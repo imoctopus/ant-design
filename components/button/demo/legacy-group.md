@@ -17,7 +17,7 @@ Debug usage
 ```tsx
 import { Button, Tooltip } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
-import type { ButtonGroupProps } from 'antd/lib/button';
+import type { ButtonGroupProps } from 'antd/es/button';
 
 const getGroup = (props?: ButtonGroupProps) => (
   <div>

@@ -15,7 +15,7 @@ We can use Checkbox and Grid in Checkbox.Group, to implement complex layout.
 
 ```tsx
 import { Checkbox, Row, Col } from 'antd';
-import type { CheckboxValueType } from 'antd/lib/checkbox/Group';
+import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 
 const onChange = (checkedValues: CheckboxValueType[]) => {
   console.log('checked = ', checkedValues);

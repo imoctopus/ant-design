@@ -26,7 +26,7 @@ import {
   FileExcelTwoTone,
   PlusOutlined,
 } from '@ant-design/icons';
-import type { RcFile, UploadFile, UploadProps } from 'antd/lib/upload/interface';
+import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
 
 const getBase64 = (file: RcFile): Promise<string> =>
   new Promise((resolve, reject) => {

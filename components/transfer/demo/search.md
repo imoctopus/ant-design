@@ -16,7 +16,7 @@ Transfer with a search box.
 ```tsx
 import { useState, useEffect } from 'react';
 import { Transfer } from 'antd';
-import type { TransferDirection } from 'antd/lib/transfer';
+import type { TransferDirection } from 'antd/es/transfer';
 
 interface RecordType {
   key: string;

@@ -17,7 +17,7 @@ Use Aliyun OSS upload example.
 import { Form, Upload, message, Button } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import type { UploadProps } from 'antd';
-import type { UploadFile } from 'antd/lib/upload/interface';
+import type { UploadFile } from 'antd/es/upload/interface';
 
 interface OSSDataType {
   dir: string;

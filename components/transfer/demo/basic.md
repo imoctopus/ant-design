@@ -16,7 +16,7 @@ The most basic usage of `Transfer` involves providing the source data and target
 ```tsx
 import { useState } from 'react';
 import { Transfer } from 'antd';
-import type { TransferDirection } from 'antd/lib/transfer';
+import type { TransferDirection } from 'antd/es/transfer';
 
 interface RecordType {
   key: string;
