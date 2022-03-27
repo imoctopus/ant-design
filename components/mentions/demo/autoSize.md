@@ -13,7 +13,7 @@ title:
 
 Height autoSize.
 
-```jsx
+```tsx
 import { Mentions } from 'antd';
 
 const { Option } = Mentions;

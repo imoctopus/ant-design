@@ -13,20 +13,21 @@ title:
 
 Add status to Mentions with `status`, which could be `error` or `warning`。
 
-```jsx
+```tsx
 import { Mentions, Space } from 'antd';
+import type { OptionProps } from 'antd/es/mentions';
 
 const { Option } = Mentions;
 
-function onChange(value) {
+const onChange = (value: string) => {
   console.log('Change:', value);
-}
+};
 
-function onSelect(option) {
+const onSelect = (option: OptionProps) => {
   console.log('select', option);
-}
+};
 
-const MentionsStatuses = () => {
+const App = () => {
   const options = (
     <>
       <Option value="afc163">afc163</Option>
@@ -47,5 +48,5 @@ const MentionsStatuses = () => {
   );
 };
 
-ReactDOM.render(<MentionsStatuses />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

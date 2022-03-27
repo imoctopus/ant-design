@@ -13,18 +13,19 @@ title:
 
 Basic usage.
 
-```jsx
+```tsx
 import { Mentions } from 'antd';
+import type { OptionProps } from 'antd/es/mentions';
 
 const { Option } = Mentions;
 
-function onChange(value) {
+const onChange = (value: string) => {
   console.log('Change:', value);
-}
+};
 
-function onSelect(option) {
+const onSelect = (option: OptionProps) => {
   console.log('select', option);
-}
+};
 
 ReactDOM.render(
   <Mentions
