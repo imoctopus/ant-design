@@ -14,16 +14,15 @@ title:
 
 Add status to Transfer with `status`, which could be `error` or `warning`.
 
-```jsx
-import React from 'react';
+```tsx
 import { Transfer, Space } from 'antd';
 
-const Status = () => (
+const App = () => (
   <Space direction="vertical">
     <Transfer status="error" />
     <Transfer status="warning" showSearch />
   </Space>
 );
 
-ReactDOM.render(<Status />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
