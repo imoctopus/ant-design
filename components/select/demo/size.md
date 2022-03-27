@@ -30,7 +30,7 @@ const handleChange = (value: string | string[]) => {
 };
 
 const App = () => {
-  const [size, setSize] = React.useState<SizeType>('default');
+  const [size, setSize] = React.useState<SizeType>('middle');
 
   const handleSizeChange = (e: RadioChangeEvent) => {
     setSize(e.target.value);
