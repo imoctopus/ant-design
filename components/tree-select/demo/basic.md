@@ -20,7 +20,7 @@ import { TreeSelect } from 'antd';
 const { TreeNode } = TreeSelect;
 
 const App = () => {
-  const [value, setValue] = useState(undefined);
+  const [value, setValue] = useState<string | undefined>(undefined);
 
   const onChange = (newValue: string) => {
     setValue(newValue);

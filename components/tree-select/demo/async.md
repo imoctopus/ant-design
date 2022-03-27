@@ -16,11 +16,12 @@ Asynchronous loading tree node.
 ```tsx
 import { useState } from 'react';
 import { TreeSelect } from 'antd';
+import type { DefaultOptionType } from 'antd/lib/select';
 import type { TreeSelectProps } from 'antd';
 
 const App = () => {
   const [value, setValue] = useState<string>();
-  const [treeData, setTreeData] = useState<TreeSelectProps['treeData']>([
+  const [treeData, setTreeData] = useState<Omit<DefaultOptionType, 'label'>[]>([
     { id: 1, pId: 0, value: '1', title: 'Expand to load' },
     { id: 2, pId: 0, value: '2', title: 'Expand to load' },
     { id: 3, pId: 0, value: '3', title: 'Tree Node', isLeaf: true },
