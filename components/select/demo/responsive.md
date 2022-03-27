@@ -15,6 +15,7 @@ Auto collapse to tag with responsive case. Not recommend use in large form case 
 
 ```tsx
 import { Select, Space } from 'antd';
+import type { SelectProps } from 'antd';
 
 interface ItemProps {
   label: string;
@@ -31,11 +32,11 @@ for (let i = 10; i < 36; i++) {
   });
 }
 
-const Demo = () => {
+const App = () => {
   const [value, setValue] = React.useState(['a10', 'c12', 'h17', 'j19', 'k20']);
 
-  const selectProps = {
-    mode: 'multiple' as const,
+  const selectProps: SelectProps = {
+    mode: 'multiple',
     style: { width: '100%' },
     value,
     options,
@@ -43,7 +44,7 @@ const Demo = () => {
       setValue(newValue);
     },
     placeholder: 'Select Item...',
-    maxTagCount: 'responsive' as const,
+    maxTagCount: 'responsive',
   };
 
   return (
@@ -54,5 +55,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

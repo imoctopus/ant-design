@@ -13,7 +13,7 @@ title:
 
 Bordered-less style component.
 
-```jsx
+```tsx
 import { Select } from 'antd';
 
 const { Option } = Select;

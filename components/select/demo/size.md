@@ -13,24 +13,26 @@ title:
 
 The height of the input field for the select defaults to 32px. If size is set to large, the height will be 40px, and if set to small, 24px.
 
-```jsx
+```tsx
 import { Select, Radio } from 'antd';
+import type { SizeType } from 'antd/es/config-provider/SizeContext';
+import type { RadioChangeEvent } from 'antd';
 
 const { Option } = Select;
 
-const children = [];
+const children: React.ReactNode[] = [];
 for (let i = 10; i < 36; i++) {
   children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
 }
 
-function handleChange(value) {
+const handleChange = (value: string | string[]) => {
   console.log(`Selected: ${value}`);
-}
+};
 
-const SelectSizesDemo = () => {
-  const [size, setSize] = React.useState('default');
+const App = () => {
+  const [size, setSize] = React.useState<SizeType>('default');
 
-  const handleSizeChange = e => {
+  const handleSizeChange = (e: RadioChangeEvent) => {
     setSize(e.target.value);
   };
 
@@ -72,7 +74,7 @@ const SelectSizesDemo = () => {
   );
 };
 
-ReactDOM.render(<SelectSizesDemo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
 
 ```css

@@ -13,14 +13,14 @@ title:
 
 Specify the prop name of Option which will be rendered in select box.
 
-```jsx
+```tsx
 import { Select } from 'antd';
 
 const { Option } = Select;
 
-function handleChange(value) {
+const handleChange = (value: string[]) => {
   console.log(`selected ${value}`);
-}
+};
 
 ReactDOM.render(
   <Select

@@ -13,14 +13,14 @@ title:
 
 Using `OptGroup` to group the options.
 
-```jsx
+```tsx
 import { Select } from 'antd';
 
 const { Option, OptGroup } = Select;
 
-function handleChange(value) {
+const handleChange = (value: string) => {
   console.log(`selected ${value}`);
-}
+};
 
 ReactDOM.render(
   <Select defaultValue="lucy" style={{ width: 200 }} onChange={handleChange}>

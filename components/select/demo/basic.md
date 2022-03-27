@@ -13,14 +13,14 @@ title:
 
 Basic Usage.
 
-```jsx
+```tsx
 import { Select } from 'antd';
 
 const { Option } = Select;
 
-function handleChange(value) {
+const handleChange = (value: string) => {
   console.log(`selected ${value}`);
-}
+};
 
 ReactDOM.render(
   <>

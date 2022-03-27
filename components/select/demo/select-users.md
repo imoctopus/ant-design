@@ -85,7 +85,7 @@ async function fetchUserList(username: string): Promise<UserValue[]> {
     );
 }
 
-const Demo = () => {
+const App = () => {
   const [value, setValue] = React.useState<UserValue[]>([]);
 
   return (
@@ -102,5 +102,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
