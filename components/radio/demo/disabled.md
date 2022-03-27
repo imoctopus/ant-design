@@ -13,37 +13,31 @@ Radio 不可用。
 
 Radio unavailable.
 
-```jsx
+```tsx
 import { Radio, Button } from 'antd';
 
-class App extends React.Component {
-  state = {
-    disabled: true,
+const App = () => {
+  const [disabled, setDisabled] = React.useState(true);
+
+  const toggleDisabled = () => {
+    setDisabled(!disabled);
   };
 
-  toggleDisabled = () => {
-    this.setState({
-      disabled: !this.state.disabled,
-    });
-  };
-
-  render() {
-    return (
-      <>
-        <Radio defaultChecked={false} disabled={this.state.disabled}>
-          Disabled
-        </Radio>
-        <Radio defaultChecked disabled={this.state.disabled}>
-          Disabled
-        </Radio>
-        <br />
-        <Button type="primary" onClick={this.toggleDisabled} style={{ marginTop: 16 }}>
-          Toggle disabled
-        </Button>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Radio defaultChecked={false} disabled={disabled}>
+        Disabled
+      </Radio>
+      <Radio defaultChecked disabled={disabled}>
+        Disabled
+      </Radio>
+      <br />
+      <Button type="primary" onClick={toggleDisabled} style={{ marginTop: 16 }}>
+        Toggle disabled
+      </Button>
+    </>
+  );
+};
 
 ReactDOM.render(<App />, mountNode);
 ```

@@ -13,13 +13,14 @@ title:
 
 A group of radio components.
 
-```jsx
+```tsx
 import { Radio } from 'antd';
+import type { RadioChangeEvent } from 'antd';
 
 const App = () => {
   const [value, setValue] = React.useState(1);
 
-  const onChange = e => {
+  const onChange = (e: RadioChangeEvent) => {
     console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
