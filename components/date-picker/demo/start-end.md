@@ -25,8 +25,8 @@ import { DatePicker, Space } from 'antd';
 import type { Moment } from 'moment';
 
 const App = () => {
-  const [startValue, setStartValue] = React.useState(null);
-  const [endValue, setEndValue] = React.useState(null);
+  const [startValue, setStartValue] = React.useState<Moment | null>(null);
+  const [endValue, setEndValue] = React.useState<Moment | null>(null);
   const [endOpen, setEndOpen] = React.useState(false);
 
   const disabledStartDate = (startDate: Moment) => {

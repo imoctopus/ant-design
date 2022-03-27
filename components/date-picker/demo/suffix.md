@@ -17,12 +17,18 @@ Basic use case. Users can select or input a date in panel.
 ```tsx
 import { DatePicker, Space } from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
-import type { DatePickerProps } from 'antd';
+import type { Moment } from 'moment';
 
 const smileIcon = <SmileOutlined />;
 const { RangePicker } = DatePicker;
 
-const onChange: DatePickerProps['onChange'] = (date, dateString) => {
+type DatePickerValue = Moment | null;
+type RangePickerValue = [Moment | null, Moment | null] | null;
+
+const onChange = (
+  date: DatePickerValue | RangePickerValue,
+  dateString: [string, string] | string,
+) => {
   console.log(date, dateString);
 };
 

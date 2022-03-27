@@ -21,7 +21,7 @@ import type { RangePickerProps } from 'antd/lib/date-picker';
 const { RangePicker } = DatePicker;
 
 const onChange: RangePickerProps['onChange'] = (dates, dateStrings) => {
-  console.log('From: ', dates[0], ', to: ', dates[1]);
+  console.log('From: ', dates?.[0], ', to: ', dates?.[1]);
   console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
 };
 

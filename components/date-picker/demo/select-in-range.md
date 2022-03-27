@@ -19,26 +19,28 @@ import type { Moment } from 'moment';
 
 const { RangePicker } = DatePicker;
 
+type RangeValue = [Moment | null, Moment | null] | null;
+
 const App = () => {
-  const [dates, setDates] = React.useState([]);
-  const [hackValue, setHackValue] = React.useState<[Moment, Moment] | undefined>();
-  const [value, setValue] = React.useState<[Moment, Moment]>([null, null]);
+  const [dates, setDates] = React.useState<RangeValue>(null);
+  const [hackValue, setHackValue] = React.useState<RangeValue>(null);
+  const [value, setValue] = React.useState<RangeValue>(null);
 
   const disabledDate = (current: Moment) => {
-    if (!dates || dates.length === 0) {
+    if (!dates) {
       return false;
     }
     const tooLate = dates[0] && current.diff(dates[0], 'days') > 7;
     const tooEarly = dates[1] && dates[1].diff(current, 'days') > 7;
-    return tooEarly || tooLate;
+    return !!tooEarly || !!tooLate;
   };
 
   const onOpenChange = (open: boolean) => {
     if (open) {
       setHackValue([null, null]);
-      setDates([]);
+      setDates([null, null]);
     } else {
-      setHackValue(undefined);
+      setHackValue(null);
     }
   };
 

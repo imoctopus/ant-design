@@ -16,12 +16,13 @@ Determing which panel to show with `mode` and `onPanelChange`.
 
 ```tsx
 import { DatePicker, Space } from 'antd';
-import React from 'react';
 import type { RangePickerProps } from 'antd/lib/date-picker';
 import type { Moment } from 'moment';
 import type { DatePickerProps } from 'antd';
 
 const { RangePicker } = DatePicker;
+
+type RangeValue = [Moment | null, Moment | null] | null;
 
 const ControlledDatePicker = () => {
   const [mode, setMode] = React.useState<DatePickerProps['mode']>('time');
@@ -48,7 +49,7 @@ const ControlledDatePicker = () => {
 
 const ControlledRangePicker = () => {
   const [mode, setMode] = React.useState<RangePickerProps['mode']>(['month', 'month']);
-  const [value, setValue] = React.useState<[Moment, Moment]>([null, null]);
+  const [value, setValue] = React.useState<RangeValue>([null, null]);
 
   const handlePanelChange: RangePickerProps['onPanelChange'] = (newValue, newModes) => {
     setValue(newValue);
