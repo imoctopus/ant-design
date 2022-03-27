@@ -14,7 +14,7 @@ debug: true
 
 Display the title and paragraph.
 
-```jsx
+```tsx
 import { Typography } from 'antd';
 
 const { Title, Paragraph, Text } = Typography;

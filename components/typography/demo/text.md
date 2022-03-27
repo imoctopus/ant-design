@@ -13,7 +13,7 @@ title:
 
 Provides multiple types of text and link.
 
-```jsx
+```tsx
 import { Typography, Space } from 'antd';
 
 const { Text, Link } = Typography;
