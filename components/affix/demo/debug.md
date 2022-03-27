@@ -15,11 +15,11 @@ DEBUG
 DEBUG
 
 ```tsx
-import React, { useState } from 'react';
 import { Affix, Button } from 'antd';
 
-const Demo: React.FC = () => {
-  const [top, setTop] = useState(10);
+const App = () => {
+  const [top, setTop] = React.useState(10);
+
   return (
     <div style={{ height: 10000 }}>
       <div>Top</div>
@@ -35,5 +35,5 @@ const Demo: React.FC = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
