@@ -13,12 +13,13 @@ title:
 
 If you need several buttons, we recommend that you use 1 primary button + n secondary buttons, and if there are more than three operations, you can group some of them into [Dropdown.Button](/components/dropdown/#components-dropdown-demo-dropdown-button).
 
-```jsx
+```tsx
 import { Button, Menu, Dropdown } from 'antd';
+import type { MenuProps } from 'antd';
 
-function handleMenuClick(e) {
+const handleMenuClick: MenuProps['onClick'] = e => {
   console.log('click', e);
-}
+};
 
 const menu = (
   <Menu onClick={handleMenuClick}>

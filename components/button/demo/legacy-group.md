@@ -14,26 +14,25 @@ Debug usage
 
 Debug usage
 
-```jsx
+```tsx
 import { Button, Tooltip } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
+import type { ButtonGroupProps } from 'antd/es/button';
 
-function getGroup(props) {
-  return (
-    <div>
-      <Button.Group {...props}>
-        <Button type="primary">Button 1</Button>
-        <Button type="primary">Button 2</Button>
-        <Tooltip title="Tooltip">
-          <Button type="primary" icon={<DownloadOutlined />} disabled />
-        </Tooltip>
-        <Tooltip title="Tooltip">
-          <Button type="primary" icon={<DownloadOutlined />} />
-        </Tooltip>
-      </Button.Group>
-    </div>
-  );
-}
+const getGroup = (props?: ButtonGroupProps) => (
+  <div>
+    <Button.Group {...props}>
+      <Button type="primary">Button 1</Button>
+      <Button type="primary">Button 2</Button>
+      <Tooltip title="Tooltip">
+        <Button type="primary" icon={<DownloadOutlined />} disabled />
+      </Tooltip>
+      <Tooltip title="Tooltip">
+        <Button type="primary" icon={<DownloadOutlined />} />
+      </Tooltip>
+    </Button.Group>
+  </div>
+);
 
 ReactDOM.render(
   <>

@@ -13,7 +13,7 @@ title:
 
 `danger` is a property of button after antd 4.0.
 
-```jsx
+```tsx
 import { Button } from 'antd';
 
 ReactDOM.render(
