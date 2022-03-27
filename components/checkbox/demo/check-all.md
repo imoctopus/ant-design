@@ -24,7 +24,7 @@ const plainOptions = ['Apple', 'Pear', 'Orange'];
 const defaultCheckedList = ['Apple', 'Orange'];
 
 const App = () => {
-  const [checkedList, setCheckedList] = React.useState(defaultCheckedList);
+  const [checkedList, setCheckedList] = React.useState<CheckboxValueType[]>(defaultCheckedList);
   const [indeterminate, setIndeterminate] = React.useState(true);
   const [checkAll, setCheckAll] = React.useState(false);
 
