@@ -13,7 +13,7 @@ title:
 
 Replace the default star to other character like alphabet, digit, iconfont or even Chinese word.
 
-```jsx
+```tsx
 import { Rate } from 'antd';
 import { HeartOutlined } from '@ant-design/icons';
 
