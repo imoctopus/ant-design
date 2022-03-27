@@ -13,12 +13,10 @@ title:
 
 Use `tipFormatter` to format content of `Tooltip`. If `tipFormatter` is null, hide it.
 
-```jsx
+```tsx
 import { Slider } from 'antd';
 
-function formatter(value) {
-  return `${value}%`;
-}
+const formatter = (value: number) => `${value}%`;
 
 ReactDOM.render(
   <>
