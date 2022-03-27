@@ -19,7 +19,7 @@ import { TimePicker } from 'antd';
 import type { Moment } from 'moment';
 
 const App = () => {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState<Moment | null>(null);
 
   const onChange = (time: Moment) => {
     setValue(time);
