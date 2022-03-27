@@ -39,7 +39,7 @@ const App = () => {
       </Form.List>
 
       <Button
-        type="button"
+        htmlType="button"
         onClick={() => {
           form.getFieldInstance('test').focus();
         }}
