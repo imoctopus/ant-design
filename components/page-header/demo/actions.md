@@ -13,7 +13,7 @@ title:
 
 Use the operating area and customize the sub-nodes, suitable for use in the need to display some complex information to help users quickly understand the information and operations of this page.
 
-```jsx
+```tsx
 import { PageHeader, Tag, Button, Statistic, Descriptions, Row } from 'antd';
 
 ReactDOM.render(
