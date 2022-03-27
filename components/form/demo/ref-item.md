@@ -14,13 +14,13 @@ debug: true
 
 Use `ref` first!
 
-```jsx
-import React from 'react';
+```tsx
 import { Button, Form, Input } from 'antd';
+import type { InputRef } from 'antd';
 
-const Demo = () => {
+const App = () => {
   const [form] = Form.useForm();
-  const ref = React.useRef();
+  const ref = React.useRef<InputRef>(null);
 
   return (
     <Form form={form} initialValues={{ list: ['light'] }}>
@@ -31,7 +31,7 @@ const Demo = () => {
       <Form.List name="list">
         {fields =>
           fields.map(field => (
-            <Form.Item key={field.key} {...field}>
+            <Form.Item {...field} key={field.key}>
               <Input ref={ref} />
             </Form.Item>
           ))
@@ -57,5 +57,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

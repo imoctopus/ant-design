@@ -42,10 +42,10 @@ const normFile = (e: any) => {
   if (Array.isArray(e)) {
     return e;
   }
-  return e && e.fileList;
+  return e?.fileList;
 };
 
-const Demo = () => {
+const App = () => {
   const onFinish = (values: any) => {
     console.log('Received values of form: ', values);
   };
@@ -206,5 +206,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

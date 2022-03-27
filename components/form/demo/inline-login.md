@@ -14,11 +14,11 @@ title:
 Inline login form is often used in navigation bar.
 
 ```tsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Form, Input, Button } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
-const HorizontalLoginForm = () => {
+const App = () => {
   const [form] = Form.useForm();
   const [, forceUpdate] = useState({});
 
@@ -67,5 +67,5 @@ const HorizontalLoginForm = () => {
   );
 };
 
-ReactDOM.render(<HorizontalLoginForm />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

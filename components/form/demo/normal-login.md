@@ -19,7 +19,7 @@ Normal login form which can contain more elements.
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
-const NormalLoginForm = () => {
+const App = () => {
   const onFinish = (values: any) => {
     console.log('Received values of form: ', values);
   };
@@ -67,7 +67,7 @@ const NormalLoginForm = () => {
   );
 };
 
-ReactDOM.render(<NormalLoginForm />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
 
 ```css

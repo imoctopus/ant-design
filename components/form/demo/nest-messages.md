@@ -34,7 +34,7 @@ const validateMessages = {
 };
 /* eslint-enable no-template-curly-in-string */
 
-const Demo = () => {
+const App = () => {
   const onFinish = (values: any) => {
     console.log(values);
   };
@@ -65,5 +65,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

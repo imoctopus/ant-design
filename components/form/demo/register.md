@@ -14,7 +14,7 @@ title:
 Fill in this form to create a new account for you.
 
 ```tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Form,
   Input,
@@ -88,7 +88,7 @@ const tailFormItemLayout = {
   },
 };
 
-const RegistrationForm = () => {
+const App = () => {
   const [form] = Form.useForm();
 
   const onFinish = (values: any) => {
@@ -300,5 +300,5 @@ const RegistrationForm = () => {
   );
 };
 
-ReactDOM.render(<RegistrationForm />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

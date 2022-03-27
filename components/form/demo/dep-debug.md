@@ -19,7 +19,7 @@ import { Form, Input } from 'antd';
 
 let acc = 0;
 
-const Demo = () => {
+const App = () => {
   const [form] = Form.useForm();
   return (
     <Form
@@ -46,5 +46,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
