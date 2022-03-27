@@ -13,12 +13,12 @@ title:
 
 Show character counting.
 
-```jsx
+```tsx
 import { Input } from 'antd';
 
 const { TextArea } = Input;
 
-const onChange = e => {
+const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
   console.log('Change:', e.target.value);
 };
 

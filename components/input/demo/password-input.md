@@ -13,7 +13,7 @@ title:
 
 Input type of password.
 
-```jsx
+```tsx
 import { Input, Space } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 

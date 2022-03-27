@@ -13,7 +13,7 @@ title:
 
 Example of creating a search box by grouping a standard input with a search button.
 
-```jsx
+```tsx
 import { Input, Space } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 
@@ -28,7 +28,7 @@ const suffix = (
   />
 );
 
-const onSearch = value => console.log(value);
+const onSearch = (value: string) => console.log(value);
 
 ReactDOM.render(
   <Space direction="vertical">

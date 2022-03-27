@@ -13,7 +13,7 @@ title:
 
 Basic usage example.
 
-```jsx
+```tsx
 import { Input } from 'antd';
 
 ReactDOM.render(<Input placeholder="Basic usage" />, mountNode);

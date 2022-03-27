@@ -14,7 +14,7 @@ Buggy!
 
 Buggy!
 
-```jsx
+```tsx
 import { Input } from 'antd';
 
 const { TextArea } = Input;

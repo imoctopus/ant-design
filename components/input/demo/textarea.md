@@ -13,7 +13,7 @@ title:
 
 For multi-line input.
 
-```jsx
+```tsx
 import { Input } from 'antd';
 
 const { TextArea } = Input;
