@@ -17,7 +17,7 @@ Add status to TreeSelect with `status`, which could be `error` or `warning`.
 ```tsx
 import { TreeSelect, Space } from 'antd';
 
-const Status: React.FC = () => (
+ReactDOM.render(
   <Space direction="vertical" style={{ width: '100%' }}>
     <TreeSelect status="error" style={{ width: '100%' }} placeholder="Error" />
     <TreeSelect
@@ -26,8 +26,7 @@ const Status: React.FC = () => (
       multiple
       placeholder="Warning multiple"
     />
-  </Space>
+  </Space>,
+  mountNode,
 );
-
-ReactDOM.render(<Status />, mountNode);
 ```
