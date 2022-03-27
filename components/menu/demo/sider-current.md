@@ -13,7 +13,7 @@ title:
 
 Click the menu and you will see that all the other menus gets collapsed to keep the entire menu compact.
 
-```jsx
+```tsx
 import { Menu } from 'antd';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 
@@ -22,11 +22,11 @@ const { SubMenu } = Menu;
 // submenu keys of first level
 const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
 
-const Sider = () => {
+const App = () => {
   const [openKeys, setOpenKeys] = React.useState(['sub1']);
 
-  const onOpenChange = keys => {
-    const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1);
+  const onOpenChange = (keys: string[]) => {
+    const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1)!;
     if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
       setOpenKeys(keys);
     } else {
@@ -60,5 +60,5 @@ const Sider = () => {
   );
 };
 
-ReactDOM.render(<Sider />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

@@ -13,15 +13,16 @@ title:
 
 Submenus open as pop-ups.
 
-```jsx
+```tsx
 import { Menu } from 'antd';
 import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
 
 const { SubMenu } = Menu;
 
-function handleClick(e) {
+const handleClick: MenuProps['onClick'] = e => {
   console.log('click', e);
-}
+};
 
 ReactDOM.render(
   <Menu onClick={handleClick} style={{ width: 256 }} mode="vertical">
