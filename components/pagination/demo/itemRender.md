@@ -17,7 +17,7 @@ Use text link for prev and next button.
 import { Pagination } from 'antd';
 import type { PaginationProps } from 'antd';
 
-const itemRender: PaginationProps['itemRender'] = (current, type, originalElement) => {
+const itemRender: PaginationProps['itemRender'] = (_, type, originalElement) => {
   if (type === 'prev') {
     return <a>Previous</a>;
   }
