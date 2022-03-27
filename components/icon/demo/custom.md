@@ -81,7 +81,7 @@ ReactDOM.render(
   <Space>
     <HeartIcon style={{ color: 'hotpink' }} />
     <PandaIcon style={{ fontSize: '32px' }} />
-    <Icon component={HomeOutlined as React.ForwardRefExoticComponent} />
+    <Icon component={HomeOutlined as React.ForwardRefExoticComponent<any>} />
     <HomeOutlined />
   </Space>,
   mountNode,
