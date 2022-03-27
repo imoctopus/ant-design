@@ -19,9 +19,16 @@ Load options lazily with `loadData`.
 
 ```tsx
 import { Cascader } from 'antd';
-import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const optionLists: CascaderOptionType[] = [
+interface Option {
+  value: string;
+  label: string;
+  children?: Option[];
+  isLeaf?: boolean;
+  loading?: boolean;
+}
+
+const optionLists: Option[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',
@@ -35,13 +42,13 @@ const optionLists: CascaderOptionType[] = [
 ];
 
 const App = () => {
-  const [options, setOptions] = React.useState<CascaderOptionType[]>(optionLists);
+  const [options, setOptions] = React.useState<Option[]>(optionLists);
 
-  const onChange: CascaderProps['onChange'] = (value, selectedOptions) => {
+  const onChange = (value: string[], selectedOptions: Option[]) => {
     console.log(value, selectedOptions);
   };
 
-  const loadData = (selectedOptions: CascaderOptionType[]) => {
+  const loadData = (selectedOptions: Option[]) => {
     const targetOption = selectedOptions[selectedOptions.length - 1];
     targetOption.loading = true;
 

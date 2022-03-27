@@ -15,9 +15,15 @@ Disable option by specifying the `disabled` property in `options`.
 
 ```tsx
 import { Cascader } from 'antd';
-import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const options: CascaderOptionType[] = [
+interface Option {
+  value: string;
+  label: string;
+  disabled?: boolean;
+  children?: Option[];
+}
+
+const options: Option[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',
@@ -53,7 +59,7 @@ const options: CascaderOptionType[] = [
   },
 ];
 
-const onChange: CascaderProps['onChange'] = value => {
+const onChange = (value: string[]) => {
   console.log(value);
 };
 

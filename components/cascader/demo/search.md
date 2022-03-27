@@ -19,9 +19,16 @@ Search and select options directly.
 
 ```tsx
 import { Cascader } from 'antd';
-import type { CascaderOptionType, CascaderProps, ShowSearchType } from 'antd/lib/cascader';
+import type { DefaultOptionType } from 'antd/es/cascader';
 
-const options: CascaderOptionType[] = [
+interface Option {
+  value: string;
+  label: string;
+  children?: Option[];
+  disabled?: boolean;
+}
+
+const options: Option[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',
@@ -61,11 +68,11 @@ const options: CascaderOptionType[] = [
   },
 ];
 
-const onChange: CascaderProps['onChange'] = (value, selectedOptions) => {
+const onChange = (value: string[], selectedOptions: Option[]) => {
   console.log(value, selectedOptions);
 };
 
-const filter: ShowSearchType['filter'] = (inputValue, path) =>
+const filter = (inputValue: string, path: DefaultOptionType[]) =>
   path.some(
     option => (option.label as string).toLowerCase().indexOf(inputValue.toLowerCase()) > -1,
   );

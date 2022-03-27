@@ -16,9 +16,14 @@ Select multiple options
 
 ```tsx
 import { Cascader } from 'antd';
-import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const options: CascaderOptionType[] = [
+interface Option {
+  value: string | number;
+  label: string;
+  children?: Option[];
+}
+
+const options: Option[] = [
   {
     label: 'Light',
     value: 'light',
@@ -52,7 +57,7 @@ const options: CascaderOptionType[] = [
   },
 ];
 
-const onChange: CascaderProps['onChange'] = value => {
+const onChange = (value: string[][]) => {
   console.log(value);
 };
 

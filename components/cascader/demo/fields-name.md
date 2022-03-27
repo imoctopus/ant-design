@@ -15,9 +15,14 @@ Custom field names.
 
 ```tsx
 import { Cascader } from 'antd';
-import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const options: CascaderOptionType[] = [
+interface Option {
+  code: string;
+  name: string;
+  items?: Option[];
+}
+
+const options: Option[] = [
   {
     code: 'zhejiang',
     name: 'Zhejiang',
@@ -52,7 +57,7 @@ const options: CascaderOptionType[] = [
   },
 ];
 
-const onChange: CascaderProps['onChange'] = value => {
+const onChange = (value: string[]) => {
   console.log(value);
 };
 

@@ -15,9 +15,14 @@ Customize the dropdown menu via `dropdownRender`.
 
 ```tsx
 import { Cascader, Divider } from 'antd';
-import type { CascaderOptionType } from 'antd/lib/cascader';
 
-const options: CascaderOptionType[] = [
+interface Option {
+  value: string;
+  label: string;
+  children?: Option[];
+}
+
+const options: Option[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',

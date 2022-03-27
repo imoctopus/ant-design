@@ -17,12 +17,11 @@ Add status to Cascader with `status`, which could be `error` or `warning`.
 ```tsx
 import { Cascader, Space } from 'antd';
 
-const App = () => (
+ReactDOM.render(
   <Space direction="vertical">
     <Cascader status="error" placeholder="Error" />
     <Cascader status="warning" multiple placeholder="Warning multiple" />
-  </Space>
+  </Space>,
+  mountNode,
 );
-
-ReactDOM.render(<App />, mountNode);
 ```

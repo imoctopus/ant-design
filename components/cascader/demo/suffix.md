@@ -17,9 +17,14 @@ Use `suffixIcon` to customize the selection box suffix icon, and use `expandIcon
 ```tsx
 import { Cascader } from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
-import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const options: CascaderOptionType[] = [
+interface Option {
+  value: string;
+  label: string;
+  children?: Option[];
+}
+
+const options: Option[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',
@@ -54,7 +59,7 @@ const options: CascaderOptionType[] = [
   },
 ];
 
-const onChange: CascaderProps['onChange'] = value => {
+const onChange = (value: string[]) => {
   console.log(value);
 };
 

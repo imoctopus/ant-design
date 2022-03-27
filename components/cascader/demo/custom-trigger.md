@@ -15,9 +15,14 @@ Separate trigger button and result.
 
 ```tsx
 import { Cascader } from 'antd';
-import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const options: CascaderOptionType[] = [
+interface Option {
+  value: string;
+  label: string;
+  children?: Option[];
+}
+
+const options: Option[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',
@@ -43,9 +48,10 @@ const options: CascaderOptionType[] = [
 const App = () => {
   const [text, setText] = React.useState('Unselect');
 
-  const onChange: CascaderProps['onChange'] = (value, selectedOptions) => {
+  const onChange = (_: string[], selectedOptions: Option[]) => {
     setText(selectedOptions.map(o => o.label).join(', '));
   };
+
   return (
     <span>
       {text}

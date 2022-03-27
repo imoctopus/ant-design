@@ -15,9 +15,14 @@ Hover to expand sub menu, click to select option.
 
 ```tsx
 import { Cascader } from 'antd';
-import type { CascaderOptionType, CascaderProps } from 'antd/lib/cascader';
 
-const options: CascaderOptionType[] = [
+interface Option {
+  value: string;
+  label: string;
+  children?: Option[];
+}
+
+const options: Option[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',
@@ -52,12 +57,12 @@ const options: CascaderOptionType[] = [
   },
 ];
 
-const onChange: CascaderProps['onChange'] = value => {
+const onChange = (value: string[]) => {
   console.log(value);
 };
 
 // Just show the latest item.
-const displayRender: CascaderProps['displayRender'] = label => label[label.length - 1];
+const displayRender = (labels: string[]) => labels[labels.length - 1];
 
 ReactDOM.render(
   <Cascader
