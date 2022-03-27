@@ -21,7 +21,7 @@ import React from 'react';
 
 const { Option } = Select;
 
-let timeout: ReturnType<typeof setTimeout>;
+let timeout: ReturnType<typeof setTimeout> | null;
 let currentValue: string;
 
 const fetch = (value: string, callback: (data: { value: string; text: string }[]) => void) => {
@@ -31,7 +31,7 @@ const fetch = (value: string, callback: (data: { value: string; text: string }[]
   }
   currentValue = value;
 
-  function fake() {
+  const fake = () => {
     const str = qs.stringify({
       code: 'utf-8',
       q: value,
@@ -48,13 +48,13 @@ const fetch = (value: string, callback: (data: { value: string; text: string }[]
           callback(data);
         }
       });
-  }
+  };
 
   timeout = setTimeout(fake, 300);
 };
 
-const SearchInput: React.FC<{ style: React.CSSProperties }> = props => {
-  const [data, setData] = React.useState([]);
+const SearchInput: React.FC<{ placeholder: string; style: React.CSSProperties }> = props => {
+  const [data, setData] = React.useState<any[]>([]);
   const [value, setValue] = React.useState<string>();
 
   const handleSearch = (newValue: string) => {

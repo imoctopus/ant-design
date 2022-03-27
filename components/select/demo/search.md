@@ -34,7 +34,7 @@ ReactDOM.render(
     onChange={onChange}
     onSearch={onSearch}
     filterOption={(input, option) =>
-      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+      (option!.children as unknown as string).toLowerCase().includes(input.toLowerCase())
     }
   >
     <Option value="jack">Jack</Option>

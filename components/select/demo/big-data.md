@@ -27,7 +27,7 @@ for (let i = 0; i < 100000; i++) {
   });
 }
 
-const handleChange = (value: string) => {
+const handleChange = (value: string[]) => {
   console.log(`selected ${value}`);
 };
 
