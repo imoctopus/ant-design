@@ -13,13 +13,14 @@ title:
 
 Click `TimePicker`, and then we could select or input a time in panel.
 
-```jsx
+```tsx
 import { TimePicker } from 'antd';
 import moment from 'moment';
+import type { Moment } from 'moment';
 
-function onChange(time, timeString) {
+const onChange = (time: Moment, timeString: string) => {
   console.log(time, timeString);
-}
+};
 
 ReactDOM.render(
   <TimePicker onChange={onChange} defaultOpenValue={moment('00:00:00', 'HH:mm:ss')} />,
