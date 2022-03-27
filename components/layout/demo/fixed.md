@@ -14,7 +14,7 @@ title:
 
 Fixed Header is generally used to fix the top navigation to facilitate page switching.
 
-```jsx
+```tsx
 import { Layout, Menu, Breadcrumb } from 'antd';
 
 const { Header, Content, Footer } = Layout;
