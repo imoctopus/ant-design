@@ -13,7 +13,7 @@ title:
 
 Show all configured prop.
 
-```jsx
+```tsx
 import { Pagination } from 'antd';
 
 ReactDOM.render(

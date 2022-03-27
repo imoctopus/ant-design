@@ -13,12 +13,13 @@ title:
 
 Change `pageSize`.
 
-```jsx
+```tsx
 import { Pagination } from 'antd';
+import type { PaginationProps } from 'antd';
 
-function onShowSizeChange(current, pageSize) {
+const onShowSizeChange: PaginationProps['onShowSizeChange'] = (current, pageSize) => {
   console.log(current, pageSize);
-}
+};
 
 ReactDOM.render(
   <>
