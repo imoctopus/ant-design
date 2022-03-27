@@ -13,7 +13,7 @@ Switch 失效状态。
 
 Disabled state of `Switch`.
 
-```jsx
+```tsx
 import { Switch, Button } from 'antd';
 
 const App = () => {

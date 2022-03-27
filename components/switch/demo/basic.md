@@ -13,12 +13,12 @@ title:
 
 The most basic usage.
 
-```jsx
+```tsx
 import { Switch } from 'antd';
 
-function onChange(checked) {
+const onChange = (checked: boolean) => {
   console.log(`switch to ${checked}`);
-}
+};
 
 ReactDOM.render(<Switch defaultChecked onChange={onChange} />, mountNode);
 ```
