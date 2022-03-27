@@ -30,7 +30,7 @@ const Apps = () => (
   </ul>
 );
 
-const breadcrumbNameMap = {
+const breadcrumbNameMap: Record<string, string> = {
   '/apps': 'Application List',
   '/apps/1': 'Application1',
   '/apps/2': 'Application2',
@@ -38,7 +38,7 @@ const breadcrumbNameMap = {
   '/apps/2/detail': 'Detail',
 };
 
-const Home = props => {
+const Home = () => {
   const location = useLocation();
   const pathSnippets = location.pathname.split('/').filter(i => i);
 
