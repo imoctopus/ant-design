@@ -16,7 +16,7 @@ There are two built-in themes: `light` and `dark`. The default value is `light`.
 ```tsx
 import { Menu, Switch } from 'antd';
 import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
-import type { MenuTheme } from 'antd';
+import type { MenuTheme, MenuProps } from 'antd';
 
 const { SubMenu } = Menu;
 
