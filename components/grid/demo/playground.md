@@ -16,9 +16,9 @@ A simple playground for column count and gutter.
 ```tsx
 import { Row, Col, Slider } from 'antd';
 
-const gutters = {};
-const vgutters = {};
-const colCounts = {};
+const gutters: Record<string, number> = {};
+const vgutters: Record<string, number> = {};
+const colCounts: Record<string, number> = {};
 
 [8, 16, 24, 32, 40, 48].forEach((value, i) => {
   gutters[i] = value;
@@ -58,7 +58,7 @@ const App = () => {
           onChange={setGutterKey}
           marks={gutters}
           step={null}
-          tipFormatter={value => gutters[value]}
+          tipFormatter={value => value && gutters[value]}
         />
       </div>
       <span>Vertical Gutter (px): </span>
@@ -70,7 +70,7 @@ const App = () => {
           onChange={setVgutterKey}
           marks={vgutters}
           step={null}
-          tipFormatter={value => vgutters[value]}
+          tipFormatter={value => value && vgutters[value]}
         />
       </div>
       <span>Column Count:</span>
@@ -82,7 +82,7 @@ const App = () => {
           onChange={setColCountKey}
           marks={colCounts}
           step={null}
-          tipFormatter={value => colCounts[value]}
+          tipFormatter={value => value && colCounts[value]}
         />
       </div>
       <Row gutter={[gutters[gutterKey], vgutters[vgutterKey]]}>
