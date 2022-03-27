@@ -13,13 +13,13 @@ title:
 
 Use [antd-img-crop](https://github.com/nanxiaobei/antd-img-crop) to crop image before uploading.
 
-```jsx
-import React, { useState } from 'react';
+```tsx
 import { Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
+import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
 
-const Demo = () => {
-  const [fileList, setFileList] = useState([
+const App = () => {
+  const [fileList, setFileList] = React.useState<UploadFile[]>([
     {
       uid: '-1',
       name: 'image.png',
@@ -28,23 +28,23 @@ const Demo = () => {
     },
   ]);
 
-  const onChange = ({ fileList: newFileList }) => {
+  const onChange: UploadProps['onChange'] = ({ fileList: newFileList }) => {
     setFileList(newFileList);
   };
 
-  const onPreview = async file => {
-    let src = file.url;
+  const onPreview = async (file: UploadFile) => {
+    let src = file.url as string;
     if (!src) {
       src = await new Promise(resolve => {
         const reader = new FileReader();
-        reader.readAsDataURL(file.originFileObj);
-        reader.onload = () => resolve(reader.result);
+        reader.readAsDataURL(file.originFileObj as RcFile);
+        reader.onload = () => resolve(reader.result as string);
       });
     }
     const image = new Image();
     image.src = src;
     const imgWindow = window.open(src);
-    imgWindow.document.write(image.outerHTML);
+    imgWindow?.document.write(image.outerHTML);
   };
 
   return (
@@ -62,5 +62,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
