@@ -13,7 +13,7 @@ title:
 
 You can set `twoToneColor` prop to specific primary color for two-tone icons.
 
-```jsx
+```tsx
 import { Space } from 'antd';
 import { SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '@ant-design/icons';
 
