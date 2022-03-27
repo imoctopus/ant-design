@@ -59,7 +59,7 @@ const App = () => {
   };
 
   const renderFooter = (
-    props: TransferListProps<any>,
+    _: TransferListProps<any>,
     {
       direction,
     }: {

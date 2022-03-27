@@ -62,10 +62,10 @@ const TableTransfer = ({ leftColumns, rightColumns, ...restProps }: TableTransfe
           const diffKeys = selected
             ? difference(treeSelectedKeys, listSelectedKeys)
             : difference(listSelectedKeys, treeSelectedKeys);
-          onItemSelectAll(diffKeys, selected);
+          onItemSelectAll(diffKeys as string[], selected);
         },
         onSelect({ key }, selected) {
-          onItemSelect(key, selected);
+          onItemSelect(key as string, selected);
         },
         selectedRowKeys: listSelectedKeys,
       };
@@ -76,11 +76,11 @@ const TableTransfer = ({ leftColumns, rightColumns, ...restProps }: TableTransfe
           columns={columns}
           dataSource={filteredItems}
           size="small"
-          style={{ pointerEvents: listDisabled ? 'none' : null }}
+          style={{ pointerEvents: listDisabled ? 'none' : undefined }}
           onRow={({ key, disabled: itemDisabled }) => ({
             onClick: () => {
               if (itemDisabled || listDisabled) return;
-              onItemSelect(key, !listSelectedKeys.includes(key));
+              onItemSelect(key as string, !listSelectedKeys.includes(key as string));
             },
           })}
         />
@@ -150,7 +150,7 @@ const App = () => {
         showSearch={showSearch}
         onChange={onChange}
         filterOption={(inputValue, item) =>
-          item.title.indexOf(inputValue) !== -1 || item.tag.indexOf(inputValue) !== -1
+          item.title!.indexOf(inputValue) !== -1 || item.tag.indexOf(inputValue) !== -1
         }
         leftColumns={leftTableColumns}
         rightColumns={rightTableColumns}

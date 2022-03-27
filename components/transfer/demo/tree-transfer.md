@@ -52,7 +52,7 @@ const TreeTransfer = ({ dataSource, targetKeys, ...restProps }: TreeTransferProp
       targetKeys={targetKeys}
       dataSource={transferDataSource}
       className="tree-transfer"
-      render={item => item.title}
+      render={item => item.title!}
       showSelectAll={false}
     >
       {({ direction, onItemSelect, selectedKeys }) => {
