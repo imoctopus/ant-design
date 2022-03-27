@@ -13,7 +13,7 @@ title:
 
 Use `type="vertical"` make it vertical.
 
-```jsx
+```tsx
 import { Divider } from 'antd';
 
 ReactDOM.render(

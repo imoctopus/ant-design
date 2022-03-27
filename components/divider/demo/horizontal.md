@@ -13,7 +13,7 @@ title:
 
 Divider is `horizontal` by default. You can add text within Divider.
 
-```jsx
+```tsx
 import { Divider } from 'antd';
 
 ReactDOM.render(

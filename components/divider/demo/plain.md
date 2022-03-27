@@ -13,7 +13,7 @@ title:
 
 You can use non-heading style of divider text by setting `plain`.
 
-```jsx
+```tsx
 import { Divider } from 'antd';
 
 ReactDOM.render(

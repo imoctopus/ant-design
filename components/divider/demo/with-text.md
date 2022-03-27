@@ -13,7 +13,7 @@ title:
 
 Divider with inner title, set `orientation="left/right"` to align it.
 
-```jsx
+```tsx
 import { Divider } from 'antd';
 
 ReactDOM.render(
