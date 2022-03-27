@@ -13,10 +13,16 @@ title:
 
 Customize the dropdown menu via `dropdownRender`.
 
-```jsx
+```tsx
 import { Cascader, Divider } from 'antd';
 
-const options = [
+interface Option {
+  value: string;
+  label: string;
+  children?: Option[];
+}
+
+const options: Option[] = [
   {
     value: 'zhejiang',
     label: 'Zhejiang',
@@ -51,15 +57,13 @@ const options = [
   },
 ];
 
-function dropdownRender(menus) {
-  return (
-    <div>
-      {menus}
-      <Divider style={{ margin: 0 }} />
-      <div style={{ padding: 8 }}>The footer is not very short.</div>
-    </div>
-  );
-}
+const dropdownRender = (menus: React.ReactNode) => (
+  <div>
+    {menus}
+    <Divider style={{ margin: 0 }} />
+    <div style={{ padding: 8 }}>The footer is not very short.</div>
+  </div>
+);
 
 ReactDOM.render(
   <Cascader options={options} dropdownRender={dropdownRender} placeholder="Please select" />,
