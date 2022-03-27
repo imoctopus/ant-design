@@ -18,7 +18,7 @@ Add status to InputNumber with `status`, which could be `error` or `warning`.
 import { InputNumber, Space } from 'antd';
 import ClockCircleOutlined from '@ant-design/icons/ClockCircleOutlined';
 
-const ValidateInputs: React.FC = () => (
+const App = () => (
   <Space direction="vertical" style={{ width: '100%' }}>
     <InputNumber status="error" style={{ width: '100%' }} />
     <InputNumber status="warning" style={{ width: '100%' }} />
@@ -27,5 +27,5 @@ const ValidateInputs: React.FC = () => (
   </Space>
 );
 
-ReactDOM.render(<ValidateInputs />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

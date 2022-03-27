@@ -16,9 +16,9 @@ Use `stringMode` to support high precision decimals support. `onChange` will ret
 ```tsx
 import { InputNumber } from 'antd';
 
-function onChange(value: string) {
+const onChange = (value: string) => {
   console.log('changed', value);
-}
+};
 
 ReactDOM.render(
   <InputNumber<string>

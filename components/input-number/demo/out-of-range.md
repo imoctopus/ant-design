@@ -16,7 +16,7 @@ Show warning style when `value` is out of range by control.
 ```tsx
 import { InputNumber, Button, Space } from 'antd';
 
-const Demo = () => {
+const App = () => {
   const [value, setValue] = React.useState<string | number>('99');
 
   return (
@@ -34,5 +34,5 @@ const Demo = () => {
   );
 };
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
