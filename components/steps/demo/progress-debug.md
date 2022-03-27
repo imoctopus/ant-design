@@ -26,7 +26,7 @@ const App = () => {
   const [status, setStatus] = React.useState<StepsProps['status']>('process');
   return (
     <>
-      <Button onClick={() => setPercentage(undefined)}>Percentage to undefined</Button>
+      <Button onClick={() => setPercentage(0)}>Percentage to undefined</Button>
       <Button onClick={() => setPercentage((percent + 10) % 100)}>Percentage +</Button>
       <Button
         onClick={() => {
