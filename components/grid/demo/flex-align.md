@@ -13,10 +13,12 @@ title:
 
 Child elements vertically aligned.
 
-```jsx
+```tsx
 import { Row, Col, Divider } from 'antd';
 
-const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
+const DemoBox: React.FC<{ value: number }> = props => (
+  <p className={`height-${props.value}`}>{props.children}</p>
+);
 
 ReactDOM.render(
   <>

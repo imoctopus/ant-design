@@ -13,7 +13,7 @@ title:
 
 To change the element sort by `order`.
 
-```jsx
+```tsx
 import { Row, Col, Divider } from 'antd';
 
 ReactDOM.render(
