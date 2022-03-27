@@ -14,7 +14,7 @@ Debug usage
 
 Debug usage
 
-```jsx
+```tsx
 import { Space, Button, Popconfirm } from 'antd';
 
 ReactDOM.render(
