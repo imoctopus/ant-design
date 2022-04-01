@@ -15,9 +15,10 @@ debug: true
 图片不存在时，会回退到 `src`。
 
 ```tsx
+import React from 'react';
 import { Avatar } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Avatar shape="circle" src="http://abc.com/not-exist.jpg">
       A
@@ -25,7 +26,8 @@ ReactDOM.render(
     <Avatar shape="circle" src="http://abc.com/not-exist.jpg">
       ABC
     </Avatar>
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

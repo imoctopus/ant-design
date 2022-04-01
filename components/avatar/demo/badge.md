@@ -14,10 +14,11 @@ title:
 Usually used for reminders and notifications.
 
 ```tsx
+import React from 'react';
 import { Avatar, Badge } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 
-ReactDOM.render(
+const App = () => (
   <>
     <span className="avatar-item">
       <Badge count={1}>
@@ -29,9 +30,10 @@ ReactDOM.render(
         <Avatar shape="square" icon={<UserOutlined />} />
       </Badge>
     </span>
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
 
 ```css
