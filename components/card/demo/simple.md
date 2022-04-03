@@ -13,15 +13,17 @@ title:
 
 A simple card only containing a content area.
 
-```jsx
+```tsx
+import React from 'react';
 import { Card } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <Card style={{ width: 300 }}>
     <p>Card content</p>
     <p>Card content</p>
     <p>Card content</p>
-  </Card>,
-  mountNode,
+  </Card>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

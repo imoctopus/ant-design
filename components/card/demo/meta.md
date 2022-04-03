@@ -13,13 +13,14 @@ title:
 
 A Card that supports `cover`, `avatar`, `title` and `description`.
 
-```jsx
+```tsx
+import React from 'react';
 import { Card, Avatar } from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;
 
-ReactDOM.render(
+const App = () => (
   <Card
     style={{ width: 300 }}
     cover={
@@ -39,7 +40,8 @@ ReactDOM.render(
       title="Card title"
       description="This is the description"
     />
-  </Card>,
-  mountNode,
+  </Card>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

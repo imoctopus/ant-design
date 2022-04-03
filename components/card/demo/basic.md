@@ -13,10 +13,11 @@ title:
 
 A basic card containing a title, content and an extra corner content. Supports two sizes: `default` and `small`.
 
-```jsx
+```tsx
+import React from 'react';
 import { Card } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Card title="Default size card" extra={<a href="#">More</a>} style={{ width: 300 }}>
       <p>Card content</p>
@@ -28,9 +29,10 @@ ReactDOM.render(
       <p>Card content</p>
       <p>Card content</p>
     </Card>
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
 
 <style>

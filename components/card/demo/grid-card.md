@@ -13,15 +13,16 @@ title:
 
 Grid style card content.
 
-```jsx
+```tsx
+import React from 'react';
 import { Card } from 'antd';
 
-const gridStyle = {
+const gridStyle: React.CSSProperties = {
   width: '25%',
   textAlign: 'center',
 };
 
-ReactDOM.render(
+const App = () => (
   <Card title="Card Title">
     <Card.Grid style={gridStyle}>Content</Card.Grid>
     <Card.Grid hoverable={false} style={gridStyle}>
@@ -32,7 +33,8 @@ ReactDOM.render(
     <Card.Grid style={gridStyle}>Content</Card.Grid>
     <Card.Grid style={gridStyle}>Content</Card.Grid>
     <Card.Grid style={gridStyle}>Content</Card.Grid>
-  </Card>,
-  mountNode,
+  </Card>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

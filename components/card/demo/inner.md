@@ -13,10 +13,11 @@ title:
 
 It can be placed inside the ordinary card to display the information of the multilevel structure.
 
-```jsx
+```tsx
+import React from 'react';
 import { Card } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <Card title="Card title">
     <Card type="inner" title="Inner Card title" extra={<a href="#">More</a>}>
       Inner Card content
@@ -29,7 +30,8 @@ ReactDOM.render(
     >
       Inner Card content
     </Card>
-  </Card>,
-  mountNode,
+  </Card>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
