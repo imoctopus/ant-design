@@ -14,7 +14,8 @@ title:
 
 Descriptions with border and background color.
 
-```jsx
+```tsx
+import React from 'react';
 import { Descriptions, Badge, Table } from 'antd';
 
 const dataSource = [
@@ -49,7 +50,8 @@ const columns = [
     key: 'address',
   },
 ];
-ReactDOM.render(
+
+const App = () => (
   <Descriptions title="User Info" column={2}>
     <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>
     <Descriptions.Item label={<div style={{ display: 'flex' }}>Billing Mode</div>}>
@@ -83,7 +85,8 @@ ReactDOM.render(
     <Descriptions.Item label="Config Info">
       <Table size="small" pagination={false} dataSource={dataSource} columns={columns} />
     </Descriptions.Item>
-  </Descriptions>,
-  mountNode,
+  </Descriptions>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

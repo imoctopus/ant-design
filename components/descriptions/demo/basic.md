@@ -13,10 +13,11 @@ title:
 
 Simplest Usage.
 
-```jsx
+```tsx
+import React from 'react';
 import { Descriptions } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <Descriptions title="User Info">
     <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>
     <Descriptions.Item label="Telephone">1810000000</Descriptions.Item>
@@ -25,7 +26,8 @@ ReactDOM.render(
     <Descriptions.Item label="Address">
       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China
     </Descriptions.Item>
-  </Descriptions>,
-  mountNode,
+  </Descriptions>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

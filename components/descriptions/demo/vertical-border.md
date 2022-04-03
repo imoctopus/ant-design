@@ -13,10 +13,11 @@ title:
 
 Descriptions with border and background color.
 
-```jsx
+```tsx
+import React from 'react';
 import { Descriptions, Badge } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <Descriptions title="User Info" layout="vertical" bordered>
     <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>
     <Descriptions.Item label="Billing Mode">Prepaid</Descriptions.Item>
@@ -44,7 +45,8 @@ ReactDOM.render(
       <br />
       Region: East China 1<br />
     </Descriptions.Item>
-  </Descriptions>,
-  mountNode,
+  </Descriptions>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
