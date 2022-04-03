@@ -53,7 +53,7 @@ const App = () => {
 
       <Divider />
 
-      <ConfigProvider renderEmpty={customize && customizeRenderEmpty}>
+      <ConfigProvider renderEmpty={customize ? customizeRenderEmpty : undefined}>
         <div className="config-provider">
           <h4>Select</h4>
           <Select style={style} />

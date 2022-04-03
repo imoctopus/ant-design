@@ -54,8 +54,8 @@ const App = () => {
     appendData();
   }, []);
 
-  const onScroll = e => {
-    if (e.target.scrollHeight - e.target.scrollTop === ContainerHeight) {
+  const onScroll = (e: React.UIEvent<HTMLElement, UIEvent>) => {
+    if (e.currentTarget.scrollHeight - e.currentTarget.scrollTop === ContainerHeight) {
       appendData();
     }
   };

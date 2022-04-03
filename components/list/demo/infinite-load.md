@@ -18,9 +18,25 @@ import React, { useState, useEffect } from 'react';
 import { List, Avatar, Skeleton, Divider } from 'antd';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
+interface DataType {
+  gender: string;
+  name: {
+    title: string;
+    first: string;
+    last: string;
+  };
+  email: string;
+  picture: {
+    large: string;
+    medium: string;
+    thumbnail: string;
+  };
+  nat: string;
+}
+
 const App = () => {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<DataType[]>([]);
 
   const loadMoreData = () => {
     if (loading) {
@@ -63,7 +79,7 @@ const App = () => {
         <List
           dataSource={data}
           renderItem={item => (
-            <List.Item key={item.id}>
+            <List.Item key={item.email}>
               <List.Item.Meta
                 avatar={<Avatar src={item.picture.large} />}
                 title={<a href="https://ant.design">{item.name.last}</a>}

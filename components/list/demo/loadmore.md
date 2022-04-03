@@ -17,16 +17,31 @@ Load more list with `loadMore` property.
 import React, { useState, useEffect } from 'react';
 import { List, Avatar, Button, Skeleton } from 'antd';
 
+interface DataType {
+  gender?: string;
+  name: {
+    title?: string;
+    first?: string;
+    last?: string;
+  };
+  email?: string;
+  picture: {
+    large?: string;
+    medium?: string;
+    thumbnail?: string;
+  };
+  nat?: string;
+  loading: boolean;
+}
+
 const count = 3;
 const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
 
 const App = () => {
   const [initLoading, setInitLoading] = useState(true);
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-  const [list, setList] = useState([]);
-
-  console.log('list===>', list);
+  const [data, setData] = useState<DataType[]>([]);
+  const [list, setList] = useState<DataType[]>([]);
 
   useEffect(() => {
     fetch(fakeDataUrl)
@@ -85,7 +100,7 @@ const App = () => {
           <Skeleton avatar title={false} loading={item.loading} active>
             <List.Item.Meta
               avatar={<Avatar src={item.picture.large} />}
-              title={<a href="https://ant.design">{item.name.last}</a>}
+              title={<a href="https://ant.design">{item.name?.last}</a>}
               description="Ant Design, a design language for background applications, is refined by Ant UED Team"
             />
             <div>content</div>
