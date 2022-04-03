@@ -13,7 +13,8 @@ title:
 
 Create a grid layout by setting the `grid` property of List.
 
-```jsx
+```tsx
+import React from 'react';
 import { List, Card } from 'antd';
 
 const data = [
@@ -31,7 +32,7 @@ const data = [
   },
 ];
 
-ReactDOM.render(
+const App = () => (
   <List
     grid={{ gutter: 16, column: 4 }}
     dataSource={data}
@@ -40,7 +41,8 @@ ReactDOM.render(
         <Card title={item.title}>Card content</Card>
       </List.Item>
     )}
-  />,
-  mountNode,
+  />
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

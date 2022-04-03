@@ -13,12 +13,12 @@ title:
 
 The example of infinite load with [react-infinite-scroll-component](https://github.com/ankeetmaini/react-infinite-scroll-component).
 
-```jsx
+```tsx
 import React, { useState, useEffect } from 'react';
-import { List, message, Avatar, Skeleton, Divider } from 'antd';
+import { List, Avatar, Skeleton, Divider } from 'antd';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-const InfiniteListExample = () => {
+const App = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
 
@@ -78,5 +78,5 @@ const InfiniteListExample = () => {
   );
 };
 
-ReactDOM.render(<InfiniteListExample />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

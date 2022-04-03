@@ -13,7 +13,8 @@ title:
 
 Basic list.
 
-```jsx
+```tsx
+import React from 'react';
 import { List, Avatar } from 'antd';
 
 const data = [
@@ -31,7 +32,7 @@ const data = [
   },
 ];
 
-ReactDOM.render(
+const App = () => (
   <List
     itemLayout="horizontal"
     dataSource={data}
@@ -44,7 +45,8 @@ ReactDOM.render(
         />
       </List.Item>
     )}
-  />,
-  mountNode,
+  />
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
