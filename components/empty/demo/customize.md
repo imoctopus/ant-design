@@ -13,10 +13,11 @@ title:
 
 Customize image source, image size, description and extra content.
 
-```jsx
+```tsx
+import React from 'react';
 import { Empty, Button } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <Empty
     image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
     imageStyle={{
@@ -29,7 +30,8 @@ ReactDOM.render(
     }
   >
     <Button type="primary">Create Now</Button>
-  </Empty>,
-  mountNode,
+  </Empty>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

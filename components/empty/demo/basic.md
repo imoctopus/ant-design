@@ -13,8 +13,10 @@ title:
 
 Simplest Usage.
 
-```jsx
+```tsx
 import { Empty } from 'antd';
 
-ReactDOM.render(<Empty />, mountNode);
+const App = () => <Empty />;
+
+ReactDOM.render(<App />, mountNode);
 ```
