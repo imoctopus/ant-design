@@ -13,39 +13,32 @@ title:
 
 A basic calendar component with Year/Month switch.
 
-```jsx
+```tsx
+import React, { useState } from 'react';
 import { Calendar, Alert } from 'antd';
 import moment from 'moment';
+import type { Moment } from 'moment';
 
-class App extends React.Component {
-  state = {
-    value: moment('2017-01-25'),
-    selectedValue: moment('2017-01-25'),
+const App = () => {
+  const [value, setValue] = useState(moment('2017-01-25'));
+  const [selectedValue, setSelectedValue] = useState(moment('2017-01-25'));
+
+  const onSelect = (newValue: Moment) => {
+    setValue(newValue);
+    setSelectedValue(newValue);
   };
 
-  onSelect = value => {
-    this.setState({
-      value,
-      selectedValue: value,
-    });
+  const onPanelChange = (newValue: Moment) => {
+    setValue(newValue);
   };
 
-  onPanelChange = value => {
-    this.setState({ value });
-  };
-
-  render() {
-    const { value, selectedValue } = this.state;
-    return (
-      <>
-        <Alert
-          message={`You selected date: ${selectedValue && selectedValue.format('YYYY-MM-DD')}`}
-        />
-        <Calendar value={value} onSelect={this.onSelect} onPanelChange={this.onPanelChange} />
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Alert message={`You selected date: ${selectedValue?.format('YYYY-MM-DD')}`} />
+      <Calendar value={value} onSelect={onSelect} onPanelChange={onPanelChange} />
+    </>
+  );
+};
 
 ReactDOM.render(<App />, mountNode);
 ```
