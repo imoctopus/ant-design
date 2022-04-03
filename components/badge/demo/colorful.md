@@ -13,7 +13,8 @@ title:
 
 We preset a series of colorful Badge styles for use in different situations. You can also set it to a hex color string for custom color.
 
-```jsx
+```tsx
+import React from 'react';
 import { Badge, Divider } from 'antd';
 
 const colors = [
@@ -32,7 +33,7 @@ const colors = [
   'lime',
 ];
 
-ReactDOM.render(
+const App = () => (
   <>
     <Divider orientation="left">Presets</Divider>
     <div>
@@ -52,9 +53,10 @@ ReactDOM.render(
       <br />
       <Badge color="#108ee9" text="#108ee9" />
     </>
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
 
 ```css

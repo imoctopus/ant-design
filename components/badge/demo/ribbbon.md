@@ -13,10 +13,11 @@ title:
 
 Use ribbon badge.
 
-```jsx
+```tsx
+import React from 'react';
 import { Badge, Card } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Badge.Ribbon text="Hippies">
       <Card title="Pushes open the window" size="small">
@@ -58,9 +59,10 @@ ReactDOM.render(
         and raises the spyglass.
       </Card>
     </Badge.Ribbon>
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
 
 ```css

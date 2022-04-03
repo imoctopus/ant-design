@@ -13,10 +13,11 @@ title:
 
 Set size of numeral Badge.
 
-```jsx
+```tsx
+import React from 'react';
 import { Badge, Avatar } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Badge size="default" count={5}>
       <Avatar shape="square" size="large" />
@@ -24,7 +25,8 @@ ReactDOM.render(
     <Badge size="small" count={5}>
       <Avatar shape="square" size="large" />
     </Badge>
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
