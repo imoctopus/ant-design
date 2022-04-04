@@ -14,7 +14,7 @@ title:
 
 The close icon can be customized using `closeIcon`.
 
-```jsx
+```tsx
 import { Tag } from 'antd';
 import { CloseCircleOutlined } from '@ant-design/icons';
 

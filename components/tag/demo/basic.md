@@ -13,17 +13,18 @@ title:
 
 Usage of basic Tag, and it could be closable by set `closable` property. Closable Tag supports `onClose` events.
 
-```jsx
+```tsx
+import React from 'react';
 import { Tag } from 'antd';
 
-function log(e) {
+const log = (e: React.MouseEvent<HTMLElement>) => {
   console.log(e);
-}
+};
 
-function preventDefault(e) {
+const preventDefault = (e: React.MouseEvent<HTMLElement>) => {
   e.preventDefault();
   console.log('Clicked! But prevent default.');
-}
+};
 
 ReactDOM.render(
   <>

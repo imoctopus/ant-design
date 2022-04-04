@@ -14,10 +14,10 @@ debug: true
 
 Internal inverse color tag
 
-```jsx
+```tsx
 import { Tag, Divider } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Divider orientation="left">Presets Inverse</Divider>
     <div>
@@ -33,9 +33,10 @@ ReactDOM.render(
       <Tag color="geekblue-inverse">geekblue</Tag>
       <Tag color="purple-inverse">purple</Tag>
     </div>
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
 
 <style>

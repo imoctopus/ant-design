@@ -13,10 +13,10 @@ title:
 
 We preset a series of colorful tag styles for use in different situations. You can also set it to a hex color string for custom color.
 
-```jsx
+```tsx
 import { Tag, Divider } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Divider orientation="left">Presets</Divider>
     <div>
@@ -39,9 +39,10 @@ ReactDOM.render(
       <Tag color="#87d068">#87d068</Tag>
       <Tag color="#108ee9">#108ee9</Tag>
     </div>
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
 
 <style>
