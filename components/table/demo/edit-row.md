@@ -79,7 +79,7 @@ const EditableCell: React.FC<EditableCellProps> = ({
   );
 };
 
-const EditableTable = () => {
+const App = () => {
   const [form] = Form.useForm();
   const [data, setData] = useState(originData);
   const [editingKey, setEditingKey] = useState('');
@@ -197,7 +197,7 @@ const EditableTable = () => {
   );
 };
 
-ReactDOM.render(<EditableTable />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```
 
 ```css

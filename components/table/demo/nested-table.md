@@ -13,9 +13,28 @@ title:
 
 Showing more detailed info of every row.
 
-```jsx
+```tsx
+import React from 'react';
 import { Table, Badge, Menu, Dropdown, Space } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
+import type { ColumnsType } from 'antd/lib/table';
+
+interface DataType {
+  key: React.Key;
+  name: string;
+  platform: string;
+  version: string;
+  upgradeNum: number;
+  creator: string;
+  createdAt: string;
+}
+
+interface ExpandedDataType {
+  key: React.Key;
+  date: string;
+  name: string;
+  upgradeNum: string;
+}
 
 const menu = (
   <Menu>
@@ -24,9 +43,9 @@ const menu = (
   </Menu>
 );
 
-function NestedTable() {
+const App = () => {
   const expandedRowRender = () => {
-    const columns = [
+    const columns: ColumnsType<ExpandedDataType> = [
       { title: 'Date', dataIndex: 'date', key: 'date' },
       { title: 'Name', dataIndex: 'name', key: 'name' },
       {
@@ -70,7 +89,7 @@ function NestedTable() {
     return <Table columns={columns} dataSource={data} pagination={false} />;
   };
 
-  const columns = [
+  const columns: ColumnsType<DataType> = [
     { title: 'Name', dataIndex: 'name', key: 'name' },
     { title: 'Platform', dataIndex: 'platform', key: 'platform' },
     { title: 'Version', dataIndex: 'version', key: 'version' },
@@ -80,7 +99,7 @@ function NestedTable() {
     { title: 'Action', key: 'operation', render: () => <a>Publish</a> },
   ];
 
-  const data = [];
+  const data: DataType[] = [];
   for (let i = 0; i < 3; ++i) {
     data.push({
       key: i,
@@ -101,7 +120,7 @@ function NestedTable() {
       dataSource={data}
     />
   );
-}
+};
 
-ReactDOM.render(<NestedTable />, mountNode);
+ReactDOM.render(<App />, mountNode);
 ```

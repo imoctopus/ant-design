@@ -13,10 +13,19 @@ title:
 
 Responsive columns.
 
-```jsx
+```tsx
+import React from 'react';
 import { Table } from 'antd';
+import type { ColumnsType } from 'antd/lib/table';
 
-const columns = [
+interface DataType {
+  key: React.Key;
+  name: string;
+  age: number;
+  address: string;
+}
+
+const columns: ColumnsType<DataType> = [
   {
     title: 'Name (all screens)',
     dataIndex: 'name',
@@ -37,7 +46,7 @@ const columns = [
   },
 ];
 
-const data = [
+const data: DataType[] = [
   {
     key: '1',
     name: 'John Brown',

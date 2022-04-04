@@ -20,7 +20,7 @@ import ResizeObserver from 'rc-resize-observer';
 import classNames from 'classnames';
 import { Table } from 'antd';
 
-function VirtualTable(props: Parameters<typeof Table>[0]) {
+const VirtualTable = (props: Parameters<typeof Table>[0]) => {
   const { columns, scroll } = props;
   const [tableWidth, setTableWidth] = useState(0);
 
@@ -122,7 +122,7 @@ function VirtualTable(props: Parameters<typeof Table>[0]) {
       />
     </ResizeObserver>
   );
-}
+};
 
 // Usage
 const columns = [
