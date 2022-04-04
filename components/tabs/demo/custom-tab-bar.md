@@ -13,13 +13,15 @@ title:
 
 Use react-sticky.
 
-```jsx
+```tsx
+import React from 'react';
 import { Tabs } from 'antd';
 import { StickyContainer, Sticky } from 'react-sticky';
+import type { TabsProps } from 'antd';
 
 const { TabPane } = Tabs;
 
-const renderTabBar = (props, DefaultTabBar) => (
+const renderTabBar: TabsProps['renderTabBar'] = (props, DefaultTabBar) => (
   <Sticky bottomOffset={80}>
     {({ style }) => (
       <DefaultTabBar {...props} className="site-custom-tab-bar" style={{ ...style }} />
@@ -27,7 +29,7 @@ const renderTabBar = (props, DefaultTabBar) => (
   </Sticky>
 );
 
-ReactDOM.render(
+const App = () => (
   <StickyContainer>
     <Tabs defaultActiveKey="1" renderTabBar={renderTabBar}>
       <TabPane tab="Tab 1" key="1" style={{ height: 200 }}>
@@ -40,9 +42,10 @@ ReactDOM.render(
         Content of Tab Pane 3
       </TabPane>
     </Tabs>
-  </StickyContainer>,
-  mountNode,
+  </StickyContainer>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
 
 ```css

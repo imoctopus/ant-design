@@ -13,12 +13,13 @@ title:
 
 Disabled a tab.
 
-```jsx
+```tsx
+import React from 'react';
 import { Tabs } from 'antd';
 
 const { TabPane } = Tabs;
 
-ReactDOM.render(
+const App = () => (
   <Tabs defaultActiveKey="1">
     <TabPane tab="Tab 1" key="1">
       Tab 1
@@ -29,7 +30,8 @@ ReactDOM.render(
     <TabPane tab="Tab 3" key="3">
       Tab 3
     </TabPane>
-  </Tabs>,
-  mountNode,
+  </Tabs>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
