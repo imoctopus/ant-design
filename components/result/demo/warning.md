@@ -13,10 +13,11 @@ title:
 
 The result of the warning.
 
-```jsx
+```tsx
+import React from 'react';
 import { Result, Button } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <Result
     status="warning"
     title="There are some problems with your operation."
@@ -25,7 +26,8 @@ ReactDOM.render(
         Go Console
       </Button>
     }
-  />,
-  mountNode,
+  />
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

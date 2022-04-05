@@ -13,16 +13,18 @@ title:
 
 Custom icon.
 
-```jsx
+```tsx
+import React from 'react';
 import { Result, Button } from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
 
-ReactDOM.render(
+const App = () => (
   <Result
     icon={<SmileOutlined />}
     title="Great, we have done all the operations!"
     extra={<Button type="primary">Next</Button>}
-  />,
-  mountNode,
+  />
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
