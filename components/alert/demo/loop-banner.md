@@ -14,11 +14,12 @@ title:
 Show a loop banner by using with [react-text-loop-next](https://npmjs.com/package/react-text-loop-next) or [react-fast-marquee](https://npmjs.com/package/react-fast-marquee).
 
 ```tsx
+import React from 'react';
 import { Alert } from 'antd';
 import { TextLoop } from 'react-text-loop-next';
 import Marquee from 'react-fast-marquee';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Alert
       banner
@@ -39,7 +40,8 @@ ReactDOM.render(
         </Marquee>
       }
     />
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

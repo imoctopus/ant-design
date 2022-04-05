@@ -33,11 +33,11 @@ const ThrowError: React.FC = () => {
     </Button>
   );
 };
-
-ReactDOM.render(
+const App = () => (
   <ErrorBoundary>
     <ThrowError />
-  </ErrorBoundary>,
-  mountNode,
+  </ErrorBoundary>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

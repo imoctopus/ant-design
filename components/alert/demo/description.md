@@ -14,9 +14,10 @@ title:
 Additional description for alert message.
 
 ```tsx
+import React from 'react';
 import { Alert } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Alert
       message="Success Text"
@@ -38,7 +39,8 @@ ReactDOM.render(
       description="Error Description Error Description Error Description Error Description"
       type="error"
     />
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

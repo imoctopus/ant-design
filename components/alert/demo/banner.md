@@ -15,9 +15,10 @@ title:
 Display Alert as a banner at top of page.
 
 ```tsx
+import React from 'react';
 import { Alert } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Alert message="Warning text" banner />
     <br />
@@ -30,7 +31,8 @@ ReactDOM.render(
     <Alert showIcon={false} message="Warning text without icon" banner />
     <br />
     <Alert type="error" message="Error text" banner />
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

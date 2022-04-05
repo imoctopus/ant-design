@@ -17,7 +17,7 @@ Custom action.
 import React from 'react';
 import { Alert, Button, Space } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <>
     <Alert
       message="Success Tips"
@@ -69,9 +69,10 @@ ReactDOM.render(
       }
       closable
     />
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
 
 <style>

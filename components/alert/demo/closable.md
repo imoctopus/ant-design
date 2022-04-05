@@ -14,13 +14,14 @@ title:
 To show close button.
 
 ```tsx
+import React from 'react';
 import { Alert } from 'antd';
 
 const onClose = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   console.log(e, 'I was closed.');
 };
 
-ReactDOM.render(
+const App = () => (
   <>
     <Alert
       message="Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text"
@@ -35,7 +36,8 @@ ReactDOM.render(
       closable
       onClose={onClose}
     />
-  </>,
-  mountNode,
+  </>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
