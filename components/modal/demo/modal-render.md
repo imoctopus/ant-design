@@ -39,7 +39,7 @@ const App = () => {
     setVisible(false);
   };
 
-  const onStart = (event: DraggableEvent, uiData: DraggableData) => {
+  const onStart = (_event: DraggableEvent, uiData: DraggableData) => {
     const { clientWidth, clientHeight } = window.document.documentElement;
     const targetRect = draggleRef.current?.getBoundingClientRect();
     if (!targetRect) {
