@@ -13,17 +13,19 @@ title:
 
 Normal message for information.
 
-```jsx
+```tsx
+import React from 'react';
 import { message, Button } from 'antd';
 
 const info = () => {
   message.info('This is a normal message');
 };
 
-ReactDOM.render(
+const App = () => (
   <Button type="primary" onClick={info}>
     Display normal message
-  </Button>,
-  mountNode,
+  </Button>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

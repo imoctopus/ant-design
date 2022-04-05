@@ -13,7 +13,8 @@ title:
 
 Update message content with unique `key`.
 
-```jsx
+```tsx
+import React from 'react';
 import { Button, message } from 'antd';
 
 const key = 'updatable';
@@ -25,10 +26,11 @@ const openMessage = () => {
   }, 1000);
 };
 
-ReactDOM.render(
+const App = () => (
   <Button type="primary" onClick={openMessage}>
     Open the message box
-  </Button>,
-  mountNode,
+  </Button>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
