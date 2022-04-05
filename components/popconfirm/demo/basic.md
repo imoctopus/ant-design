@@ -13,20 +13,21 @@ title:
 
 The basic example.
 
-```jsx
+```tsx
+import React from 'react';
 import { Popconfirm, message } from 'antd';
 
-function confirm(e) {
+const confirm = (e: React.MouseEvent<HTMLElement>) => {
   console.log(e);
   message.success('Click on Yes');
-}
+};
 
-function cancel(e) {
+const cancel = (e: React.MouseEvent<HTMLElement>) => {
   console.log(e);
   message.error('Click on No');
-}
+};
 
-ReactDOM.render(
+const App = () => (
   <Popconfirm
     title="Are you sure to delete this task?"
     onConfirm={confirm}
@@ -35,7 +36,8 @@ ReactDOM.render(
     cancelText="No"
   >
     <a href="#">Delete</a>
-  </Popconfirm>,
-  mountNode,
+  </Popconfirm>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
