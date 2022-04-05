@@ -14,10 +14,11 @@ title:
 
 You can customize the style of the button, just note the size limit: no more than `40px * 40px`.
 
-```jsx
+```tsx
+import React from 'react';
 import { BackTop } from 'antd';
 
-const style = {
+const style: React.CSSProperties = {
   height: 40,
   width: 40,
   lineHeight: '40px',
@@ -28,7 +29,7 @@ const style = {
   fontSize: 14,
 };
 
-ReactDOM.render(
+const App = () => (
   <div style={{ height: '600vh', padding: 8 }}>
     <div>Scroll to bottom</div>
     <div>Scroll to bottom</div>
@@ -40,7 +41,8 @@ ReactDOM.render(
     <BackTop>
       <div style={style}>UP</div>
     </BackTop>
-  </div>,
-  mountNode,
+  </div>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
