@@ -21,9 +21,11 @@ const { Link } = Anchor;
 
 const AnchorExample: React.FC = () => {
   const [targetOffset, setTargetOffset] = useState<number | undefined>(undefined);
+
   useEffect(() => {
     setTargetOffset(window.innerHeight / 2);
   }, []);
+
   return (
     <Anchor targetOffset={targetOffset}>
       <Link href="#components-anchor-demo-basic" title="Basic demo" />

@@ -14,6 +14,7 @@ title:
 Clicking on an anchor does not record history.
 
 ```tsx
+import React from 'react';
 import { Anchor } from 'antd';
 
 const { Link } = Anchor;
@@ -29,7 +30,7 @@ const handleClick = (
   console.log(link);
 };
 
-ReactDOM.render(
+const App = () => (
   <Anchor affix={false} onClick={handleClick}>
     <Link href="#components-anchor-demo-basic" title="Basic demo" />
     <Link href="#components-anchor-demo-static" title="Static demo" />
@@ -37,7 +38,8 @@ ReactDOM.render(
       <Link href="#Anchor-Props" title="Anchor Props" />
       <Link href="#Link-Props" title="Link Props" />
     </Link>
-  </Anchor>,
-  mountNode,
+  </Anchor>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
