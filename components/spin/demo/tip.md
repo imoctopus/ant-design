@@ -13,17 +13,19 @@ title:
 
 Customized description content.
 
-```jsx
+```tsx
+import React from 'react';
 import { Spin, Alert } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <Spin tip="Loading...">
     <Alert
       message="Alert message title"
       description="Further details about the context of this alert."
       type="info"
     />
-  </Spin>,
-  mountNode,
+  </Spin>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```

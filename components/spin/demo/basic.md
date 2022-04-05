@@ -13,8 +13,11 @@ title:
 
 A simple loading status.
 
-```jsx
+```tsx
+import React from 'react';
 import { Spin } from 'antd';
 
-ReactDOM.render(<Spin />, mountNode);
+const App = () => <Spin />;
+
+ReactDOM.render(<App />, mountNode);
 ```
