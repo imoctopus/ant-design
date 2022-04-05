@@ -13,8 +13,11 @@ title:
 
 Complex combination with avatar and multiple paragraphs.
 
-```jsx
+```tsx
+import React from 'react';
 import { Skeleton } from 'antd';
 
-ReactDOM.render(<Skeleton avatar paragraph={{ rows: 4 }} />, mountNode);
+const App = () => <Skeleton avatar paragraph={{ rows: 4 }} />;
+
+ReactDOM.render(<App />, mountNode);
 ```
