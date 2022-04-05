@@ -13,13 +13,15 @@ title:
 
 The simplest usage.
 
-```jsx
+```tsx
+import React from 'react';
 import { Tooltip } from 'antd';
 
-ReactDOM.render(
+const App = () => (
   <Tooltip title="prompt text">
     <span>Tooltip will show on mouse enter.</span>
-  </Tooltip>,
-  mountNode,
+  </Tooltip>
 );
+
+ReactDOM.render(<App />, mountNode);
 ```
