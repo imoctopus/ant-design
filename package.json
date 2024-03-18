@@ -117,7 +117,7 @@
   "dependencies": {
     "@ant-design/colors": "^7.0.2",
     "@ant-design/cssinjs": "^1.18.4",
-    "@ant-design/icons": "^5.3.3",
+    "@ant-design/icons": "^5.3.4",
     "@ant-design/react-slick": "~1.0.2",
     "@babel/runtime": "^7.24.0",
     "@ctrl/tinycolor": "^3.6.1",
@@ -131,7 +131,7 @@
     "qrcode.react": "^3.1.0",
     "rc-cascader": "~3.24.0",
     "rc-checkbox": "~3.2.0",
-    "rc-collapse": "~3.7.2",
+    "rc-collapse": "~3.7.3",
     "rc-dialog": "~9.4.0",
     "rc-drawer": "~7.1.0",
     "rc-dropdown": "~4.2.0",
